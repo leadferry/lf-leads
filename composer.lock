@@ -1,0 +1,29 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "ada21a5e7392af9f1f1b53a0f5fee847",
+    "packages": [
+        {
+            "name": "wordpress/wp-list-table",
+            "version": "3.8",
+            "dist": {
+                "type": "file",
+                "url": "http://core.svn.wordpress.org/tags/3.8/wp-admin/includes/class-wp-list-table.php",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

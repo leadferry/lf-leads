@@ -45,11 +45,36 @@ add_action('plugins_loaded', 'lf_lead_update');
 function lf_add_lead($lead_id, $user_id, $sync_status) {
 
 	global $wpdb;
-	$lf_lead_db_name = $wpdb->prefix . LF_LEAD;;
+	$lf_lead_db_name = $wpdb->prefix . LF_LEAD;
 
 	$wpdb->insert($lf_lead_db_name, array(
 			'sync_status' => $sync_status,
 			'user_id' => $user_id,
 			'lead_id' => $lead_id,
 	));
+}
+
+/**
+ * Change the edit link
+ */
+add_filter( 'get_edit_user_link', 'lf_get_edit_lead_link', 10, 2 );
+function lf_get_edit_lead_link( $link, $user_id ) {
+    global $role;
+    
+    if(isset($role) && $role==LF_LEAD) {
+        $link = add_query_arg( array(
+                'role' => LF_LEAD,
+                'page' => plugin_basename(LEADFERRY_PATH . 'leads/profile.php'),
+                'user_id' => $user_id,
+        ), self_admin_url( 'users.php' ) );
+    }
+    return $link;
+}
+
+add_action( 'admin_menu', 'lf_lead_user_profile_page' );
+/**
+ * Add the menu page
+ */
+function lf_lead_user_profile_page(){
+	add_users_page( 'User Profile', 'User Profile', 'manage_options', plugin_basename(LEADFERRY_PATH . 'leads/profile.php'), '', '', 71 );
 }
