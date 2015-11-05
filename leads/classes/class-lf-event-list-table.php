@@ -33,17 +33,8 @@ class LF_Event_List_Table extends LF_List_Table {
     }
 
     private function table_data() {
-    	$response = wp_remote_get('http://10.0.2.2:3000/events');
-
+    	$response = wp_remote_get('http://10.0.2.2:3001/events');
     	$data = json_decode( $response['body'], true );
-
-
-    	// $data[] = array( 'event' => 'Sample Event',
-    	// 	'action' => "Sample action",
-    	// 	'source' => 'Sample source',
-    	// 	'when' => '1 Nov, 2015' 
-    	// );
-
     	return $data;
     }
 
