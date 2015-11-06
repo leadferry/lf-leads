@@ -29,10 +29,11 @@ class LF_Lead {
 		}
 		else {
 			$response = json_decode( $response['body'], true );
-			$this->first_visit = $response['first visit'];
-			$this->last_seen = $response['last seen'];
-
-			$this->update_lead_meta();
+			if( !empty( $response ) ) {
+				$this->first_visit = $response['first visit'];
+				$this->last_seen = $response['last seen'];
+				$this->update_lead_meta();
+			}
 		}
 	}
 
