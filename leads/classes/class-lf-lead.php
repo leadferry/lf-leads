@@ -45,8 +45,14 @@ class LF_Lead {
 	}
 
 	public function get_lead_meta() {
-		$this->first_visit = get_user_meta( $user_id, '_first_visit', true );
-		$this->last_seen = get_user_meta( $user_id, '_last_seen', true );
+		$first_visit = get_user_meta( $this->user_id, '_first_visit', true );
+		$last_seen = get_user_meta( $this->user_id, '_last_seen', true );
+
+		$this->first_visit = $first_visit ? $first_visit : "unavailable";
+		$this->last_seen = $last_seen ? $last_seen : "unavailable";
+
+		if ( !$first_visit )
+			echo '<div class="error"><p>Data for this profile could not be fetched from LeadFerry servers, please try refreshing the page. If the issues persists, please contact <a href="#" mailto="support@leadferry.com">support@leadferry.com</a></p></div>';
 	}
 
 	public function display_events() {

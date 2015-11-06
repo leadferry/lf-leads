@@ -9,6 +9,19 @@ class LF_Event_List_Table extends LF_List_Table {
 
         $data = $this->table_data();
 
+        // Pagination
+        $perPage = 1;
+        $currentPage = $this->get_pagenum();
+        $totalItems = count($data);
+
+        $this->set_pagination_args( array(
+            'total_items' => $totalItems,
+            'per_page'    => $perPage
+        ) );
+
+        if ( $data )
+            $data = array_slice($data,(($currentPage-1)*$perPage),$perPage);
+
         $this->_column_headers = array($columns, $hidden, $sortable);
         $this->items = $data;
     }
@@ -34,9 +47,14 @@ class LF_Event_List_Table extends LF_List_Table {
 
     private function table_data() {
     	$response = wp_remote_get('http://10.0.2.2:3001/events');
+        if( is_wp_error( $response ) ) {
+            $data = false;
+            return $data;
+        }
     	$data = json_decode( $response['body'], true );
     	return $data;
     }
+
 
     public function column_default( $item, $column_name )
     {

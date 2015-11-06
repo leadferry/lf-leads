@@ -1,9 +1,10 @@
 <?php
-require( LEADFERRY_PATH . 'leads/classes/class-lf-lead.php' );
-
 
 $user_id = isset( $_GET['user_id'] ) ? $_GET['user_id'] : get_current_user_id();
+
+require( LEADFERRY_PATH . 'leads/classes/class-lf-lead.php' );
 $lead = new LF_Lead( $user_id );
+
 $user_info = get_userdata( $user_id );
 // Render the template
 ?>
