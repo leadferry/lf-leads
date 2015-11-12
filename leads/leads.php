@@ -75,6 +75,23 @@ add_action( 'admin_menu', 'lf_lead_user_profile_page' );
 /**
  * Add the menu page
  */
-function lf_lead_user_profile_page(){
-	add_users_page( 'User Profile', 'User Profile', 'manage_options', plugin_basename(LEADFERRY_PATH . 'leads/profile.php'), '', '', 71 );
+function lf_lead_user_profile_page() {
+	$lf_users_page = plugin_basename(LEADFERRY_PATH . 'leads/profile.php');
+	add_users_page( 'User Profile', 'User Profile', 'manage_options', $lf_users_page, '', '', 71 );
+	add_action( "load-$lf_users_page", 'lf_users_page_screen_options' );
+}
+
+function lf_users_page_screen_options() {
+	$args = array(
+		'label' => 'Events per page',
+		'default' => 10,
+		'option' => 'lf_per_page'
+		);
+	add_screen_option( 'per_page', $args );
+}
+
+add_filter( 'set-screen-option', 'lf_set_screen_option', 10, 3 );
+function lf_set_screen_option( $status, $option, $value ) {
+	if( 'lf_per_page' == $option )
+		return $value;
 }
