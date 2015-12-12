@@ -99,3 +99,6 @@ function lf_set_screen_option( $status, $option, $value ) {
 
 // Settings Page
 require_once(dirname(__FILE__) . '/classes/class-lf-settings-page.php');
+
+// Lead Capture Support
+require_once(dirname(__FILE__) . '/classes/vendors/class-lf-formidable-forms.php');
