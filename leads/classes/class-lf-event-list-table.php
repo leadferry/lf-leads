@@ -47,10 +47,8 @@ class LF_Event_List_Table extends LF_List_Table {
     }
 
     private function table_data() {
-        var_dump($this->get_pagenum());
         $start = $this->get_pagenum() * $this->get_items_per_page( 'lf_per_page' );
     	$response = wp_remote_get('http://10.0.2.2:3001/events?_start=' . $start . '&_limit=' . $this->get_items_per_page( 'lf_per_page' ) );
-        var_dump('http://10.0.2.2:3001/events?_start=' . $start . '&_limit=' . $this->get_items_per_page( 'lf_per_page' ) );
         if( is_wp_error( $response ) ) {
             $data = false;
             return $data;

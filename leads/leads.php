@@ -95,3 +95,7 @@ function lf_set_screen_option( $status, $option, $value ) {
 	if( 'lf_per_page' == $option )
 		return $value;
 }
+
+
+// Settings Page
+require_once(dirname(__FILE__) . '/classes/class-lf-settings-page.php');
