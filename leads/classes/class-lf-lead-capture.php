@@ -6,8 +6,7 @@
  */
 class LF_Lead_Capture {
 
-	public $lead_first_name;
-	public $lead_last_name;
+	public $lead_name;
 	public $lead_email;
 
 	/**
@@ -15,10 +14,14 @@ class LF_Lead_Capture {
 	 * 
 	 */
 	public function prepare_data( $lead_first_name, $lead_last_name, $lead_email ) {
-		$this->lead_first_name = $lead_first_name;
-		$this->lead_last_name = $lead_last_name;
-		$this->lead_email = $lead_email;
-	}
+
+		if( empty( $lead_last_name )) {
+			$this->lead_name = $lead_first_name;
+		}
+		else {
+			$this->lead_name = $lead_first_name . ' ' . $lead_last_name;
+		}
+		$this->lead_email = $lead_email;	}
 
 	/**
 	 * POST data to remote server
@@ -26,7 +29,8 @@ class LF_Lead_Capture {
 	 */
 	public function post_data() {
 
-		// wp_remote_post();
+		$msg = "Posting : " . $this->lead_name . $this->lead_email;
 
+		wp_die( $msg );
 	}
 }
