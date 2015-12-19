@@ -108,3 +108,4 @@ require_once(dirname(__FILE__) . '/classes/vendors/class-lf-contact-forms-bestwe
 require_once(dirname(__FILE__) . '/classes/vendors/class-lf-custom-contact-forms.php');
 require_once(dirname(__FILE__) . '/classes/vendors/class-lf-fs-contact-forms.php');
 require_once(dirname(__FILE__) . '/classes/vendors/class-lf-mailpoet.php');
+require_once(dirname(__FILE__) . '/classes/vendors/class-lf-leadsquared-cf7.php');

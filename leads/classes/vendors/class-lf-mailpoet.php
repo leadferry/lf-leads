@@ -13,8 +13,10 @@ class LF_Mailpoet extends LF_Lead_Capture {
 	 *
 	 */
 	public function capture_lead( $id )  {
+		
+		$id = $id;
 
-		wp_die( $id );
+// 		wp_die( $id );
 
 		$this->prepare_data( $submission_id, '', '' );
 		$this->post_data();

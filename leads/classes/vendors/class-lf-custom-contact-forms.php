@@ -14,7 +14,16 @@ class LF_Custom_Contact_Forms extends LF_Lead_Capture {
 	 */
 	public function capture_lead( $submission_id, $form_id ) {
 
-		$this->prepare_data( $submission_id, '', '' );
+		$options = get_option( 'leadferry_options' );
+
+		$name = $_POST['ccf_field_' . $options['lead_first_name']];
+		$email = 'ccf_field_' . $options['lead_email'];
+
+		$lead_first_name = $name['first'];
+		$lead_last_name = $name['last'];
+		$lead_email = $_POST[$email];
+
+		$this->prepare_data( $lead_first_name, $lead_last_name, $lead_email );
 		$this->post_data();
 		
 	}
