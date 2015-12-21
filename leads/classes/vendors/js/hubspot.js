@@ -1,20 +1,23 @@
-jQuery( 'document' ).ready( function( $ ) {
+jQuery(window).load( function() {
 
-	$( '#hsForm_1b8a829b-e610-4ac4-a04c-de3cb9aa5600' ).submit( function() {
+	function lf_ajax_request() {
 
 		var ajax_data = {
 			action: 'hubspot_capture_lead',
-			'firstname': $("input[name=firstname]").val(),
-			'lastname': $("input[name=lastname]").val(),
-			'email': $("input[name=email]").val(),
-
-		};
-
-		$.ajax( {
+			'firstname': jQuery("input[name=firstname]").val(),
+			'lastname': jQuery("input[name=lastname]").val(),
+			'email': jQuery("input[name=email]").val(),
+		}
+		
+		jQuery.ajax( {
 			url: ajax_object.url,
-			type: 'GET',
+			type: 'POST',
 			dataType: 'json',
 			data: ajax_data,
 		});
-	});
+	}
+
+	var hubspot_id = jQuery('[id^="hsForm_"]').attr('id');
+	document.getElementById(hubspot_id).addEventListener( 'submit', lf_ajax_request );
+
 });
