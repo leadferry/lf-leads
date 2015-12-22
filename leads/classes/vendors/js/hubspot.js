@@ -1,6 +1,8 @@
 jQuery(window).load( function() {
 
-	function lf_ajax_request() {
+	var hubspot_id = "#" + jQuery('[id^="hsForm_"]').attr('id');
+
+	jQuery(hubspot_id).submit(function () {
 
 		var ajax_data = {
 			action: 'hubspot_capture_lead',
@@ -15,9 +17,5 @@ jQuery(window).load( function() {
 			dataType: 'json',
 			data: ajax_data,
 		});
-	}
-
-	var hubspot_id = jQuery('[id^="hsForm_"]').attr('id');
-	document.getElementById(hubspot_id).addEventListener( 'submit', lf_ajax_request );
-
+	});
 });
