@@ -31,6 +31,6 @@ class LF_Lead_Capture {
 
 		$msg = "Posting : " . $this->lead_name . $this->lead_email;
 
-		// wp_die( $msg );
+		wp_die( $msg );
 	}
 }

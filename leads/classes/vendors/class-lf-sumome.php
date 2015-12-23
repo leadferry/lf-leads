@@ -2,19 +2,19 @@
 
 require_once( LEADFERRY_PATH . '/leads/classes/class-lf-lead-capture.php');
 
-class LF_Mailpoet extends LF_Lead_Capture {
+class LF_Sumome extends LF_Lead_Capture {
 
 	function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'add_scripts') );
-		add_action( 'wp_ajax_nopriv_mailpoet_capture_lead', array( $this, 'mailpoet_capture_lead' ) );
-		add_action( 'wp_ajax_mailpoet_capture_lead', array( $this, 'mailpoet_capture_lead' ) );
+		add_action( 'wp_ajax_nopriv_sumome_capture_lead', array( $this, 'sumome_capture_lead' ) );
+		add_action( 'wp_ajax_sumome_capture_lead', array( $this, 'sumome_capture_lead' ) );
 	}
 
 	/**
 	 * Capture lead
 	 *
 	 */
-	public function mailpoet_capture_lead() {
+	public function sumome_capture_lead() {
 
 		$options = get_option( 'leadferry_options' );
 
@@ -31,9 +31,9 @@ class LF_Mailpoet extends LF_Lead_Capture {
 	 * Enqueue JS files
 	 */
 	public function add_scripts() {
-		wp_enqueue_script( 'lf_mailpoet', LEADFERRY_URL . '/leads/classes/vendors/js/mailpoet.js', '', '', true );
-		wp_localize_script( 'lf_mailpoet', 'ajax_object', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
+		wp_enqueue_script( 'lf_sumome', LEADFERRY_URL . '/leads/classes/vendors/js/sumome.js', '', '', true );
+		wp_localize_script( 'lf_sumome', 'ajax_object', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
 	}
 }
 
-$mailpoet = new LF_Mailpoet();
+$sumome = new LF_Sumome();
