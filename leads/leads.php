@@ -114,3 +114,4 @@ require_once(dirname(__FILE__) . '/classes/class-lf-settings-page.php');
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-sumome.php');
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-simplycast.php');
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-cfb.php');
+require_once(dirname(__FILE__) . '/classes/vendors/class-lf-newsletter.php');
