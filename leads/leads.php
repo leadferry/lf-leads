@@ -116,4 +116,5 @@ require_once(dirname(__FILE__) . '/classes/class-lf-settings-page.php');
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-cfb.php');
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-newsletter.php');
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-formstack.php');
-require_once(dirname(__FILE__) . '/classes/vendors/class-lf-visual-form-builder.php');
+// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-visual-form-builder.php');
+require_once(dirname(__FILE__) . '/classes/vendors/class-lf-scrollboxes.php');
