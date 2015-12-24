@@ -118,3 +118,5 @@ require_once(dirname(__FILE__) . '/classes/class-lf-settings-page.php');
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-formstack.php');
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-visual-form-builder.php');
 require_once(dirname(__FILE__) . '/classes/vendors/class-lf-scrollboxes.php');
+require_once(dirname(__FILE__) . '/classes/vendors/class-lf-wp-leads.php');
+require_once(dirname(__FILE__) . '/classes/vendors/class-lf-launchpad.php');
