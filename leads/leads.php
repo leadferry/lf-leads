@@ -102,7 +102,7 @@ require_once(dirname(__FILE__) . '/classes/class-lf-settings-page.php');
 
 // Lead Capture Support
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-formidable-forms.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-jetpack.php');
+require_once(dirname(__FILE__) . '/classes/vendors/class-lf-jetpack.php');
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-ninja-forms.php');
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-contact-forms-bestwebsoft.php');
 // require_once(dirname(__FILE__) . '/classes/vendors/class-lf-custom-contact-forms.php');
