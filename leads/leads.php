@@ -101,23 +101,8 @@ function lf_set_screen_option( $status, $option, $value ) {
 require_once(dirname(__FILE__) . '/classes/class-lf-settings-page.php');
 
 // Lead Capture Support
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-formidable-forms.php');
-require_once(dirname(__FILE__) . '/classes/vendors/class-lf-jetpack.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-ninja-forms.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-contact-forms-bestwebsoft.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-custom-contact-forms.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-fs-contact-forms.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-mailpoet.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-leadsquared-cf7.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-hubspot.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-mailchimp.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-sumome.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-simplycast.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-cfb.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-newsletter.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-formstack.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-visual-form-builder.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-scrollboxes.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-wp-leads.php');
-// require_once(dirname(__FILE__) . '/classes/vendors/class-lf-launchpad.php');
-require_once(dirname(__FILE__) . '/classes/vendors/class-lf-seedprod.php');
+$product = get_option('lf_lead_forms');
+if( $product ) {
+	$product = $product['selected_product'];
+	require_once(dirname(__FILE__) . '/classes/vendors/class-lf-'. $product .'.php');
+}
