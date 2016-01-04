@@ -13,24 +13,42 @@ class LF_Lead_Capture {
 	 * Prepare data to be posted
 	 * 
 	 */
-	public function prepare_data( $lead_first_name, $lead_last_name, $lead_email ) {
+	public function prepare_data( $lead ) {
 
-		if( empty( $lead_last_name )) {
-			$this->lead_name = $lead_first_name;
-		}
-		else {
-			$this->lead_name = $lead_first_name . ' ' . $lead_last_name;
-		}
-		$this->lead_email = $lead_email;	}
+		$name = isset( $lead['last_name'] ) ? $lead['first_name'] . ' ' . $lead['last_name'] : $lead['first_name'] ;
+
+		$source = isset( $lead['source'] ) ? $lead['source'] : "3rd Party" ;
+		$form = array(
+			'reference' => isset( $lead['form_id'] ) ? $lead['form_id'] : 'Not Available',
+			'source' => $source,
+			'provider' => $lead['provider'],
+		);
+
+		$properties = array(
+			'name' => $name,
+			'email' => isset( $lead['email'] ) ? $lead['email'] : 'Not Available',
+		);
+
+		$data = array(
+			'content' => array( 
+				'form' => $form,
+				'properties' => $properties,
+				'visitor' => '<cookie_value>',
+				'session' => '<cookie_value>'
+			 ),
+		);
+
+		$json_data = json_encode( $data );
+
+		return $json_data;	
+	}
 
 	/**
 	 * POST data to remote server
 	 * 
 	 */
-	public function post_data() {
+	public function post_data( $data ) {
 
-		$msg = "Posting : " . $this->lead_name . $this->lead_email;
-
-		// wp_die( $msg );
+		wp_die( $data );
 	}
 }

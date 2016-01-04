@@ -14,10 +14,18 @@ class LF_Mailchimp extends LF_Lead_Capture {
 	 *
 	 */
 	public function capture_lead( $form) {
-		$data = $form->data;
+		$form_data = $form->data;
 
-		$this->prepare_data( '', '', $data['EMAIL'] );
-		$this->post_data();
+		$lead['provider'] = "MailChimp";
+		$lead['form_id'] = $form->ID;
+		if( isset( $form_data['FNAME'] ) )
+			$lead['first_name'] = $form_data['FNAME'];
+		if( isset( $form_data['LNAME'] ) )
+		$lead['last_name'] = $form_data['LNAME'];
+		$lead['email'] = $form_data['EMAIL'];
+
+		$data = $this->prepare_data( $lead );
+		$this->post_data( $data );
 		
 	}
 }

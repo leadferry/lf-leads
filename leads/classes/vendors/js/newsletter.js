@@ -1,7 +1,6 @@
 jQuery(window).load( function() {
 
-	jQuery('.newsletter form').submit(function () {
-
+	jQuery('.newsletter form').submit(function (e) {
 		var ajax_data = {
 			action: 'newsletter_capture_lead',
 			'email': jQuery("input[name=ne]").val(),

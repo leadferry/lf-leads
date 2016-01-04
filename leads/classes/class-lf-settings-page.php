@@ -95,7 +95,7 @@ class LF_Settings_Page {
 				<option value="newsletter" <?php selected( $selected_product, 'newsletter' ); ?>>Newsletter</option>
 				<option value="scrollboxes" <?php selected( $selected_product, 'scrollboxes' ); ?>>Dreamgrow Scroll Triggered Box</option>
 				<option value="seedprod" <?php selected( $selected_product, 'seedprod' ); ?>>Seedprod</option>
-				<option value="simplycast" <?php selected( $selected_product, 'simplycast' ); ?>>S implycast</option>
+				<option value="simplycast" <?php selected( $selected_product, 'simplycast' ); ?>>Simplycast</option>
 				<option value="sumome" <?php selected( $selected_product, 'sumome' ); ?>>Sumome</option>
 				<option value="visual-form-builder" <?php selected( $selected_product, 'visual-form-builder' ); ?>>Visual Form Builder</option>
 				<option value="wp-leads" <?php selected( $selected_product, 'wp-leads' ); ?>>WP Leads</option>

@@ -1,18 +1,22 @@
 jQuery(window).load( function() {
 
-	var seedprod_id = "#" + jQuery('[id$="-form"]').attr('id');
+	if( local_data.form_id ) {
+		var seedprod_id = local_data.form_id;
+	}
+	else{
+		var seedprod_id = jQuery('[id$="-form"]').attr('id');
+	}
 
-	jQuery( seedprod_id ).submit(function() {
-
-
+	jQuery( "#" + seedprod_id ).submit(function () {
 		var ajax_data = {
 			action: 'seedprod_capture_lead',
-			'firstname': jQuery( "#" + ajax_object.name ).val(),
-			'email': jQuery(  "#" + ajax_object.email ).val(),
+			'name': jQuery( "#" + local_data.name ).val(),
+			'email': jQuery( "#" + local_data.email ).val(),
+			'form_id': seedprod_id,
 		}
 		
 		jQuery.ajax( {
-			url: ajax_object.url,
+			url: local_data.url,
 			type: 'POST',
 			dataType: 'json',
 			data: ajax_data,

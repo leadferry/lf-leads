@@ -1,18 +1,26 @@
 jQuery(window).load( function() {
 
-	var simplycast_id = "#" + jQuery('[id^="scInlineForm-"]').attr('id');
+	console.log(jQuery( local_data.first_name ).val());
 
-	jQuery(simplycast_id).submit(function () {
+	if( local_data.form_id ) {
+		var simplycast_id = local_data.form_id;
+	}
+	else{
+		var simplycast_id = jQuery('[id^="scInlineForm-"]').attr('id');
+	}
+
+	jQuery("#" + simplycast_id).submit(function () {
 
 		var ajax_data = {
 			action: 'simplycast_capture_lead',
-			'firstname': jQuery(".firstInput").val(),
-			'lastname': jQuery(".secondInput").val(),
-			'email': jQuery("#EmailElement_0_input").val(),
+			'firstname': jQuery( '[name="' + local_data.first_name + '"]' ).val(),
+			'lastname': jQuery( '[name="' + local_data.last_name + '"]' ).val(),
+			'email': jQuery( '[name="' + local_data.email + '"]' ).val(),
+			'form_id': simplycast_id,
 		}
 		
 		jQuery.ajax( {
-			url: ajax_object.url,
+			url: local_data.url,
 			type: 'POST',
 			dataType: 'json',
 			data: ajax_data,

@@ -13,8 +13,7 @@ class LF_Jetpack extends LF_Lead_Capture {
 	 * Capture lead
 	 *
 	 */
-	public function capture_lead( $post_id, $all_values, $extra_values ) {
-		
+	public function capture_lead( $post_id, $all_values, $extra_values ) {		
 		$options = get_option( 'lf_jetpack_options' );
 
 		/* $all_values is an array containing the data posted by Jetpack form 
@@ -26,12 +25,14 @@ class LF_Jetpack extends LF_Lead_Capture {
 		$lastname = array_keys( array_flip ( preg_grep( "/Last Name$/", $keys ) ) );
 		$email = array_keys( array_flip ( preg_grep( "/Email$/", $keys ) ) );
 
-		$lead_first_name = $all_values[$firstname[0]];
-		$lead_last_name = $all_values[$lastname[0]];
-		$lead_email = $all_values[$email[0]];
+		$lead['provider'] = "Jetpack";
+		// $lead['form_id'] = $_POST['form_id'];
+		$lead['first_name'] = $all_values[$firstname[0]];
+		$lead['last_name'] = $all_values[$lastname[0]];
+		$lead['email'] = $all_values[$email[0]];
 
-		$this->prepare_data( $lead_first_name, $lead_last_name, $lead_email );
-		$this->post_data();
+		$data = $this->prepare_data( $lead );
+		$this->post_data( $data );
 	}
 
 	/**

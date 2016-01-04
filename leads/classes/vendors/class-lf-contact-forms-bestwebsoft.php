@@ -14,13 +14,12 @@ class LF_Contact_Forms_Bestwebsoft extends LF_Lead_Capture {
 	 */
 	public function capture_lead( $all_values ) {
 
-		$options = get_option( 'leadferry_options' );
+		$lead['provider'] = "Bestwebsoft Contact Form";
+		$lead['first_name'] = $_POST['cntctfrm_contact_name'];
+		$lead['email'] = $_POST['cntctfrm_contact_email'];
 
-		$lead_name = $_POST['cntctfrm_contact_name'];
-		$lead_email = $_POST['cntctfrm_contact_email'];
-
-		$this->prepare_data( $lead_name, '', $lead_email );
-		$this->post_data();
+		$data = $this->prepare_data( $lead );
+		$this->post_data( $data );
 		
 	}
 }

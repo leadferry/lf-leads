@@ -5,7 +5,7 @@ require_once( LEADFERRY_PATH . '/leads/classes/class-lf-lead-capture.php');
 class LF_Custom_Contact_Forms extends LF_Lead_Capture {
 
 	function __construct() {
-		add_action( 'ccf_successful_submission', array( $this, 'capture_lead'), 20, 2 );
+		// add_action( 'ccf_successful_submission', array( $this, 'capture_lead'), 20, 2 );
 	}
 
 	/**
@@ -13,6 +13,8 @@ class LF_Custom_Contact_Forms extends LF_Lead_Capture {
 	 *
 	 */
 	public function capture_lead( $submission_id, $form_id ) {
+
+		// wp_die(var_dump($_POST));
 
 		$options = get_option( 'leadferry_options' );
 

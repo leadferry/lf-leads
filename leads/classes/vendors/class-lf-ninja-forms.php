@@ -20,12 +20,14 @@ class LF_Ninja_Forms extends LF_Lead_Capture {
 
 		$options = get_option( 'lf_ninja_options' );
 
-		$lead_first_name = $all_values[ $options['lead_first_name'] ];
-		$lead_last_name = $all_values[ $options['lead_last_name'] ];
-		$lead_email = $all_values[ $options['lead_email'] ];
+		$lead['provider'] = "Ninja Forms";
+		// $lead['form_id'] = $_POST['form_id'];
+		$lead['first_name'] = $all_values[ $options['lead_first_name'] ];
+		$lead['last_name'] = $all_values[ $options['lead_last_name'] ];
+		$lead['email'] = $all_values[ $options['lead_email'] ];
 
-		$this->prepare_data( $lead_first_name, $lead_last_name, $lead_email );
-		$this->post_data();	
+		$data = $this->prepare_data( $lead );
+		$this->post_data( $data );
 	}
 
 	/**

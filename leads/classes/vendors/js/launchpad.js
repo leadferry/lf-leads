@@ -1,17 +1,33 @@
 jQuery(window).load( function() {
 
-	jQuery('form').submit(function() {
+	if( local_data.form_id ) {
+		var launchpad_id = local_data.form_id;
+	}
+	else{
+		var launchpad_id = jQuery('form').attr('id');
+	}
 
+	var selector;
+
+	if( launchpad_id ) {
+		selector = "#" + launchpad_id;
+	}
+	else {
+		selector = 'form';
+	}
+
+	jQuery( selector ).submit(function () {
 
 		var ajax_data = {
 			action: 'launchpad_capture_lead',
-			'firstname': jQuery( "#" + ajax_object.firstname ).val(),
-			'lastname': jQuery( "#" + ajax_object.lastname ).val(),
-			'email': jQuery(  "#" + ajax_object.email ).val(),
+			'firstname': jQuery( "#" + local_data.first_name ).val(),
+			'lastname': jQuery( "#" + local_data.last_name ).val(),
+			'email': jQuery( "#" + local_data.email ).val(),
+			'form_id': launchpad_id,
 		}
 		
 		jQuery.ajax( {
-			url: ajax_object.url,
+			url: local_data.url,
 			type: 'POST',
 			dataType: 'json',
 			data: ajax_data,
