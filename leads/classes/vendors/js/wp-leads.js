@@ -10,6 +10,8 @@ jQuery(window).load( function() {
 	}
 
 	jQuery( "#" + wp_leads_id ).submit(function (e) {
+		
+		var form = this;
 		e.preventDefault();
 
 		var ajax_data = {
@@ -25,6 +27,10 @@ jQuery(window).load( function() {
 			type: 'POST',
 			dataType: 'json',
 			data: ajax_data,
+		});
+
+		jQuery( document ).ajaxComplete( function () {
+			form.submit();
 		});
 	});
 });

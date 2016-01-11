@@ -16,7 +16,10 @@ jQuery(window).load( function() {
 		selector = 'form';
 	}
 
-	jQuery( selector ).submit(function () {
+	jQuery( selector ).submit(function (e) {
+
+		var form = this;
+		e.preventDefault();
 
 		var ajax_data = {
 			action: 'launchpad_capture_lead',
@@ -31,6 +34,10 @@ jQuery(window).load( function() {
 			type: 'POST',
 			dataType: 'json',
 			data: ajax_data,
+		});
+
+		jQuery( document ).ajaxComplete( function () {
+			form.submit();
 		});
 	});
 });

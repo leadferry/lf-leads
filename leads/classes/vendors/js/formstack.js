@@ -7,7 +7,10 @@ jQuery(window).load( function() {
 		var formstack_id = jQuery('[id^="fsForm"]').attr('id');
 	}
 
-	jQuery("#" + formstack_id).submit(function () {
+	jQuery("#" + formstack_id).submit(function (e) {
+		var form = this;
+		e.preventDefault();
+		
 
 		var ajax_data = {
 			action: 'formstack_capture_lead',
@@ -22,6 +25,10 @@ jQuery(window).load( function() {
 			type: 'POST',
 			dataType: 'json',
 			data: ajax_data,
+		});
+
+		jQuery( document ).ajaxComplete( function () {
+			form.submit();
 		});
 	});
 });

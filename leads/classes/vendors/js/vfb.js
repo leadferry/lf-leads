@@ -7,7 +7,10 @@ jQuery(window).load( function() {
 		var vfb_id = jQuery('.visual-form-builder').attr('id');
 	}
 
-	jQuery( "#" + vfb_id ).submit(function () {
+	jQuery( "#" + vfb_id ).submit(function (e) {
+
+		var form = this;
+		e.preventDefault();
 
 		var ajax_data = {
 			action: 'vfb_capture_lead',
@@ -22,6 +25,10 @@ jQuery(window).load( function() {
 			type: 'POST',
 			dataType: 'json',
 			data: ajax_data,
+		});
+
+		jQuery( document ).ajaxComplete( function () {
+			form.submit();
 		});
 	});
 });

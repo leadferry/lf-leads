@@ -7,7 +7,11 @@ jQuery(window).load( function() {
 		var seedprod_id = jQuery('[id$="-form"]').attr('id');
 	}
 
-	jQuery( "#" + seedprod_id ).submit(function () {
+	jQuery( "#" + seedprod_id ).submit(function (e) {
+
+		var form = this;
+		e.preventDefault();
+		
 		var ajax_data = {
 			action: 'seedprod_capture_lead',
 			'name': jQuery( "#" + local_data.name ).val(),
@@ -20,6 +24,10 @@ jQuery(window).load( function() {
 			type: 'POST',
 			dataType: 'json',
 			data: ajax_data,
+		});
+
+		jQuery( document ).ajaxComplete( function () {
+			form.submit();
 		});
 	});
 });
