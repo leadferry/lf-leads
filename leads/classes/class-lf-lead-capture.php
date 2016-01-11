@@ -15,7 +15,10 @@ class LF_Lead_Capture {
 	 */
 	public function prepare_data( $lead ) {
 
-		$name = isset( $lead['last_name'] ) ? $lead['first_name'] . ' ' . $lead['last_name'] : $lead['first_name'] ;
+		if( isset($lead['first_name'] ) )
+			$name = isset( $lead['last_name'] ) ? $lead['first_name'] . ' ' . $lead['last_name'] : $lead['first_name'] ;
+		else
+			$name = 'Not Available';
 
 		$source = isset( $lead['source'] ) ? $lead['source'] : "3rd Party" ;
 		$form = array(

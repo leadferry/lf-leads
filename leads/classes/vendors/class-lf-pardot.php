@@ -2,10 +2,12 @@
 
 require_once( LEADFERRY_PATH . '/leads/classes/class-lf-lead-capture.php');
 
-class LF_Leadsquared_CF7 extends LF_Lead_Capture {
+class LF_Pardot extends LF_Lead_Capture {
 
 	function __construct() {
-		add_action( 'wpcf7_mail_sent', array( $this, 'capture_lead') );
+		add_action( 'wp_enqueue_scripts', array( $this, 'add_scripts') );
+		add_action( 'wp_ajax_nopriv_pardot_capture_lead', array( $this, 'pardot_capture_lead' ) );
+		add_action( 'wp_ajax_pardot_capture_lead', array( $this, 'pardot_capture_lead' ) );
 		add_action( 'admin_init', array( $this, 'init_settings'));
 	}
 
@@ -13,40 +15,25 @@ class LF_Leadsquared_CF7 extends LF_Lead_Capture {
 	 * Capture lead
 	 *
 	 */
-	public function capture_lead( $contact_form ) {
+	public function pardot_capture_lead() {
 
-		$submission = WPCF7_Submission::get_instance();
-		if ( $submission ) {
-			$options = get_option( 'lf_cf7_options' );
+		$lead['provider'] = "pardot";
+		$lead['form_id'] = $_POST['form_id'];
+		$lead['first_name'] = $_POST['firstname'];
+		$lead['last_name'] = $_POST['lastname'];
+		$lead['email'] = $_POST['email'];
 
-        	$data = $submission->get_posted_data();
-
-        	$lead['provider'] = 'Leadsquared Contact Form 7';
-
-        	if( !empty( $options['lead_form_id'] ) )
-        		$lead['form_id'] = $options['lead_form_id'];
-        	
-        	$lead['first_name'] = $data[ $options['lead_first_name'] ];
-
-        	if( !empty( $options['lead_last_name'] ) )
-				$lead['last_name'] = $data[ $options['lead_last_name'] ];
-
-			$lead['email'] = $data[ $options['lead_email'] ];
-
-			$data = $this->prepare_data( $lead );
-			$this->post_data( $data );
-
-			return true;
-	        	
-    	}		
+		$data = $this->prepare_data( $lead );
+		$this->post_data( $data );
+		
 	}
-
+	
 	/**
 	 * Allows user to provide names for name & email fields
 	 * 
 	 */
 	public function init_settings(){
-		register_setting( 'lf_lead_capture_options', 'lf_cf7_options', array( $this, 'validate_options' ) );
+		register_setting( 'lf_lead_capture_options', 'lf_pardot_options', array( $this, 'validate_options' ) );
 		add_settings_section( 'lf_lead_capture_section', 'Form Integration Details', array( $this, 'settings_section_text' ), 'lf_lead_capture_settings' );
 		add_settings_field( 'lf_lead_form_id', 'Form ID', array( $this, 'lf_lead_form_id_callback' ), 'lf_lead_capture_settings', 'lf_lead_capture_section' );
 		add_settings_field( 'lf_lead_first_name', 'Lead First Name', array( $this, 'lf_lead_first_name_callback' ), 'lf_lead_capture_settings', 'lf_lead_capture_section' );
@@ -60,7 +47,7 @@ class LF_Leadsquared_CF7 extends LF_Lead_Capture {
 	 */
 	public function validate_options( $input ) {
 
-		$options = get_option( 'lf_cf7_options' );
+		$options = get_option( 'lf_pardot_options' );
 		$options['lead_form_id'] = sanitize_text_field( $input['lead_form_id'] );
 		$options['lead_first_name'] = sanitize_text_field( $input['lead_first_name'] );
 		$options['lead_last_name'] = sanitize_text_field( $input['lead_last_name'] );
@@ -73,8 +60,8 @@ class LF_Leadsquared_CF7 extends LF_Lead_Capture {
 	 * 
 	 */
 	public function settings_section_text() { ?>
-		<h2>Leadsquared Settings</h2>
-		<p>Please provide the values of name attributes for the follwing fields in your Contact Form 7 form. </p>
+		<h2>Pardot Settings</h2>
+		<p>Please provide the values of name attributes for the follwing fields in your Pardot form. </p>
 
 	<?php }
 
@@ -83,9 +70,9 @@ class LF_Leadsquared_CF7 extends LF_Lead_Capture {
 	 * 
 	 */
 	public function lf_lead_form_id_callback() {
-		$options = get_option( 'lf_cf7_options' );
+		$options = get_option( 'lf_pardot_options' );
 		$lead_form_id = isset( $options['lead_form_id'] ) ? $options['lead_form_id'] : '' ;
-		echo '<input id="lf_lead_form_id" name="lf_cf7_options[lead_form_id]" size="40" type="text" value="'. $lead_form_id .'">';
+		echo '<input id="lf_lead_form_id" name="lf_pardot_options[lead_form_id]" size="40" type="text" value="'. $lead_form_id .'">';
 	}
 
 	/**
@@ -93,9 +80,9 @@ class LF_Leadsquared_CF7 extends LF_Lead_Capture {
 	 * 
 	 */
 	public function lf_lead_first_name_callback() {
-		$options = get_option( 'lf_cf7_options' );
+		$options = get_option( 'lf_pardot_options' );
 		$lead_first_name = isset( $options['lead_first_name'] ) ? $options['lead_first_name'] : '' ;
-		echo '<input id="lf_lead_first_name" name="lf_cf7_options[lead_first_name]" size="40" type="text" value="'. $lead_first_name .'">';
+		echo '<input id="lf_lead_first_name" name="lf_pardot_options[lead_first_name]" size="40" type="text" value="'. $lead_first_name .'">';
 	}
 
 	/**
@@ -103,9 +90,9 @@ class LF_Leadsquared_CF7 extends LF_Lead_Capture {
 	 * 
 	 */
 	public function lf_lead_last_name_callback() {
-		$options = get_option( 'lf_cf7_options' );
+		$options = get_option( 'lf_pardot_options' );
 		$lead_last_name = isset( $options['lead_last_name'] ) ? $options['lead_last_name'] : '' ;
-		echo '<input id="lf_lead_last_name" name="lf_cf7_options[lead_last_name]" size="40" type="text" value="'. $lead_last_name .'">';
+		echo '<input id="lf_lead_last_name" name="lf_pardot_options[lead_last_name]" size="40" type="text" value="'. $lead_last_name .'">';
 	}
 
 	/**
@@ -113,10 +100,27 @@ class LF_Leadsquared_CF7 extends LF_Lead_Capture {
 	 * 
 	 */
 	public function lf_lead_email_callback() {
-		$options = get_option( 'lf_cf7_options' );
+		$options = get_option( 'lf_pardot_options' );
 		$lead_email = isset( $options['lead_email'] ) ? $options['lead_email'] : '' ;
-		echo '<input id="lf_lead_email" name="lf_cf7_options[lead_email]" size="40" type="text" value="'. $lead_email .'">';
+		echo '<input id="lf_lead_email" name="lf_pardot_options[lead_email]" size="40" type="text" value="'. $lead_email .'">';
+	}
+
+	/**
+	 * Enqueue JS files
+	 */
+	public function add_scripts() {
+
+		$options = get_option( 'lf_pardot_options' );
+		$local_data = array( 
+			'url' => admin_url( 'admin-ajax.php' ),
+			'form_id' => $options['lead_form_id'],
+			'first_name' => $options['lead_first_name'],
+			'last_name' => $options['lead_last_name'],
+			'email' => $options['lead_email'],
+		);
+		wp_enqueue_script( 'lf_pardot', LEADFERRY_URL . '/leads/classes/vendors/js/pardot.js', '', '', true );
+		wp_localize_script( 'lf_pardot', 'local_data', $local_data );
 	}
 }
 
-$leadsquared_cf7 = new LF_Leadsquared_CF7();
+$pardot = new LF_Pardot();

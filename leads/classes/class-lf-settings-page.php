@@ -93,6 +93,7 @@ class LF_Settings_Page {
 				<option value="mailchimp" <?php selected( $selected_product, 'mailchimp' ); ?>>Mailchimp</option>
 				<option value="mailpoet" <?php selected( $selected_product, 'mailpoet' ); ?>>Mailpoet</option>
 				<option value="newsletter" <?php selected( $selected_product, 'newsletter' ); ?>>Newsletter</option>
+				<option value="pardot" <?php selected( $selected_product, 'pardot' ); ?>>Pardot</option>
 				<option value="scrollboxes" <?php selected( $selected_product, 'scrollboxes' ); ?>>Dreamgrow Scroll Triggered Box</option>
 				<option value="seedprod" <?php selected( $selected_product, 'seedprod' ); ?>>Seedprod</option>
 				<option value="simplycast" <?php selected( $selected_product, 'simplycast' ); ?>>Simplycast</option>
