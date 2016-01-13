@@ -50,6 +50,8 @@ class LF_Lead_Capture {
 	 */
 	public function post_data( $args ) {
 
+		wp_die($args);
+
 		$public_key = get_option(LF_PREFIX . 'public_key');
 		$defaults = array(
 				'method' => 'POST',

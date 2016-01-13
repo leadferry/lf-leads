@@ -19,12 +19,17 @@ class LF_Custom_Contact_Form extends LF_Lead_Capture {
 
 		$options = get_option( 'leadferry_options' );
 
-		$lead_first_name = $_POST['firstname'];
-		$lead_last_name = $_POST['lastname'];
-		$lead_email = $_POST['email'];
+		$lead['provider'] = "Contact Form Builder";
+		$lead['form_id'] = $_POST['form_id'];
+		$lead['first_name'] = $_POST['firstname'];
 
-		$this->prepare_data( $lead_first_name, $lead_last_name, $lead_email );
-		$this->post_data();
+		if( isset( $_POST['lastname'] ) )
+			$lead['last_name'] = $_POST['lastname'];
+		
+		$lead['email'] = $_POST['email'];
+
+		$data = $this->prepare_data( $lead );
+		$this->post_data( $data );
 		
 	}
 
@@ -60,8 +65,8 @@ class LF_Custom_Contact_Form extends LF_Lead_Capture {
 	 * 
 	 */
 	public function settings_section_text() { ?>
-		<h2>cfb Settings</h2>
-		<p>Please provide the values of name attributes for the follwing fields in your cfb form. </p>
+		<h2>Custom Form Builder Settings</h2>
+		<p>Please provide the values of name attributes for the follwing fields in your Custom form. </p>
 
 	<?php }
 

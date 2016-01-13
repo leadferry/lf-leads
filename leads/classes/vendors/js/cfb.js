@@ -7,8 +7,10 @@ jQuery(document).ready( function() {
 		var cfb_id = jQuery('form').attr('id');
 	}
 
-	jQuery( "#" + cfb_id ).submit(function () {
+	var originalAction = jQuery( ".button-submit" ).attr('onCLick');
+	jQuery( ".button-submit" ).removeAttr('onCLick');
 
+	jQuery( ".button-submit" ).click(function () {
 		var ajax_data = {
 			action: 'cfb_capture_lead',
 			'firstname': jQuery( "#" + local_data.first_name ).val(),
@@ -22,6 +24,10 @@ jQuery(document).ready( function() {
 			type: 'POST',
 			dataType: 'json',
 			data: ajax_data,
+		});
+
+		jQuery( document ).ajaxComplete( function () {
+			eval(originalAction);
 		});
 	});
 });
