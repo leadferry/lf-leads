@@ -102,7 +102,6 @@ require_once(dirname(__FILE__) . '/classes/class-lf-settings-page.php');
 
 // Lead Capture Support
 $product = get_option('lf_lead_forms');
-if( $product ) {
-	$product = $product['selected_product'];
-	require_once(dirname(__FILE__) . '/classes/vendors/class-lf-'. $product .'.php');
+if( $product && $product['selected_product'] != "none" ) {
+	require_once(dirname(__FILE__) . '/classes/vendors/class-lf-'. $product['selected_product'] .'.php');
 }

@@ -78,6 +78,7 @@ class LF_Settings_Page {
 		$selected_product = isset( $options['selected_product'] ) ? $options['selected_product'] : 'none' ;
 		?>
 			<select id="lf_select_product" name="lf_lead_forms[selected_product]" onchange="this.form.submit()">
+				<option value="none" <?php selected( $selected_product, 'none' );?>>None</option>
 				<option value="jetpack" <?php selected( $selected_product, 'jetpack' );?>>Jetpack</option>
 				<option value="ninja-forms" <?php selected( $selected_product, 'ninja-forms' ); ?>>Ninja Forms</option>
 				<option value="formstack" <?php selected( $selected_product, 'formstack' ); ?>>Formstack</option>
