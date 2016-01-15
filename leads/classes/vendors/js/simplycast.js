@@ -1,7 +1,5 @@
 jQuery(window).load( function() {
 
-	console.log(jQuery( local_data.first_name ).val());
-
 	if( local_data.form_id ) {
 		var simplycast_id = local_data.form_id;
 	}

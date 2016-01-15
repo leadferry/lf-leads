@@ -58,7 +58,7 @@ class LF_Seedprod extends LF_Lead_Capture {
 	 */
 	public function settings_section_text() { ?>
 		<h2>Seedprod Settings</h2>
-		<p>Please provide the IDs for following fields in seedprod form
+		<p>Please provide the IDs for following fields in Seedprod form
 	<?php }
 
 	/**

@@ -89,6 +89,7 @@ class LF_Settings_Page {
 				<option value="fs-contact-forms" <?php selected( $selected_product, 'fs-contact-forms' ); ?>>Fast & Secure contact forms</option>
 				<option value="hubspot" <?php selected( $selected_product, 'hubspot' ); ?>>Hubspot</option>
 				<option value="launchpad" <?php selected( $selected_product, 'launchpad' ); ?>>Launchpad</option>
+				<option value="leadsquared" <?php selected( $selected_product, 'leadsquared' ); ?>>Leadsquared</option>
 				<option value="leadsquared-cf7" <?php selected( $selected_product, 'leadsquared-cf7' ); ?>>Leadsquared ( Contact form 7 )</option>
 				<option value="mailchimp" <?php selected( $selected_product, 'mailchimp' ); ?>>Mailchimp</option>
 				<option value="mailpoet" <?php selected( $selected_product, 'mailpoet' ); ?>>Mailpoet</option>
@@ -103,7 +104,6 @@ class LF_Settings_Page {
 			</select>
 		<?php
 	}
-
 }
 
 if( is_admin() )

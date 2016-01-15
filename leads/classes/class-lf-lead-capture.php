@@ -39,7 +39,7 @@ class LF_Lead_Capture {
 				$data[$cookie] = $_COOKIE[LF_PREFIX . $cookie];
 			}
 		}
-
+		
 		$json_data = json_encode( $data );
 		return $json_data;
 	}
@@ -77,6 +77,5 @@ class LF_Lead_Capture {
 				lf_add_lead($body['visitor'], $user_id, LF_SYNC_STATUS_UPDATE_PENDING);
 			}
 		}
-
 	}
 }

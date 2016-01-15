@@ -86,7 +86,7 @@ function lf_users_page_screen_options() {
 		'label' => 'Events per page',
 		'default' => 10,
 		'option' => 'lf_per_page'
-		);
+	);
 	add_screen_option( 'per_page', $args );
 }
 
