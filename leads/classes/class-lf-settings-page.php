@@ -78,7 +78,6 @@ class LF_Settings_Page {
 		$selected_product = isset( $options['selected_product'] ) ? $options['selected_product'] : 'none' ;
 		?>
 			<select id="lf_select_product" name="lf_lead_forms[selected_product]" onchange="this.form.submit()">
-				<option value="custom" <?php selected( $selected_product, 'custom' );?>>Custom</option>
 				<option value="jetpack" <?php selected( $selected_product, 'jetpack' );?>>Jetpack</option>
 				<option value="ninja-forms" <?php selected( $selected_product, 'ninja-forms' ); ?>>Ninja Forms</option>
 				<option value="formstack" <?php selected( $selected_product, 'formstack' ); ?>>Formstack</option>
@@ -101,6 +100,7 @@ class LF_Settings_Page {
 				<option value="sumome" <?php selected( $selected_product, 'sumome' ); ?>>Sumome</option>
 				<option value="visual-form-builder" <?php selected( $selected_product, 'visual-form-builder' ); ?>>Visual Form Builder</option>
 				<option value="wp-leads" <?php selected( $selected_product, 'wp-leads' ); ?>>WP Leads</option>
+				<option value="custom" <?php selected( $selected_product, 'custom' );?>>Custom</option>
 			</select>
 		<?php
 	}
