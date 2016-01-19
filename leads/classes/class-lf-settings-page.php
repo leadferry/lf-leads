@@ -88,6 +88,7 @@ class LF_Settings_Page {
 				<option value="formidable-forms" <?php selected( $selected_product, 'formidable-forms' ); ?>>Formidable Forms</option>
 				<option value="fs-contact-forms" <?php selected( $selected_product, 'fs-contact-forms' ); ?>>Fast & Secure contact forms</option>
 				<option value="hubspot" <?php selected( $selected_product, 'hubspot' ); ?>>Hubspot</option>
+				<option value="hellobar" <?php selected( $selected_product, 'hellobar' ); ?>>Hellobar</option>
 				<option value="launchpad" <?php selected( $selected_product, 'launchpad' ); ?>>Launchpad</option>
 				<option value="leadsquared" <?php selected( $selected_product, 'leadsquared' ); ?>>Leadsquared</option>
 				<option value="leadsquared-cf7" <?php selected( $selected_product, 'leadsquared-cf7' ); ?>>Leadsquared ( Contact form 7 )</option>

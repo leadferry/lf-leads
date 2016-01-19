@@ -67,7 +67,7 @@ class LF_Custom extends LF_Lead_Capture {
 	 * 
 	 */
 	public function settings_section_text() { ?>
-		<h2>custom Settings</h2>
+		<h2>Settings for any other form</h2>
 		<p>Please provide the IDs for the following fields.  </p>
 
 	<?php }
