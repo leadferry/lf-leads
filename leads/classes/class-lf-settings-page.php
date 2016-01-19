@@ -102,6 +102,7 @@ class LF_Settings_Page {
 				<option value="sumome" <?php selected( $selected_product, 'sumome' ); ?>>Sumome</option>
 				<option value="visual-form-builder" <?php selected( $selected_product, 'visual-form-builder' ); ?>>Visual Form Builder</option>
 				<option value="wp-leads" <?php selected( $selected_product, 'wp-leads' ); ?>>WP Leads</option>
+				<option value="wordpress-landing-pages" <?php selected( $selected_product, 'wordpress-landing-pages' ); ?>>Wordpress Landing Pages</option>
 				<option value="custom" <?php selected( $selected_product, 'custom' );?>>Custom</option>
 			</select>
 		<?php
