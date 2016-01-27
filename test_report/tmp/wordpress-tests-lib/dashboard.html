@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /tmp/wordpress-tests-lib</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/nv.d3.min.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../../js/html5shiv.min.js"></script>
+  <script src="../../js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../../index.html"></a></li>
+        <li><a href="../index.html">tmp</a></li>
+        <li><a href="index.html">wordpress-tests-lib</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="includes/testcase-canonical.php.html#3">WP_Canonical_UnitTestCase</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#17">WP_Ajax_UnitTestCase</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/spy-rest-server.php.html#3">Spy_REST_Server</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/mock-mailer.php.html#4">MockPHPMailer</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-rest-api.php.html#3">WP_Test_REST_TestCase</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-xmlrpc.php.html#6">WP_XMLRPC_UnitTestCase</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#378">wpdb_exposed_methods_for_testing</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#131">testXMLParser</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#24">MockAction</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/trac.php.html#3">TracTickets</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/functions.php.html#45">Basic_Object</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#425">WP_UnitTest_Factory_Callback_After_Create</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#128">WP_UnitTest_Factory_For_User</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#92">WP_UnitTest_Factory_For_Attachment</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#65">WP_UnitTest_Factory_For_Post</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#3">WP_UnitTest_Factory</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#153">WP_UnitTest_Factory_For_Comment</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#184">WP_UnitTest_Factory_For_Blog</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#403">WP_UnitTest_Generator_Sequence</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#299">WP_UnitTest_Factory_For_Thing</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#253">WP_UnitTest_Factory_For_Term</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#220">WP_UnitTest_Factory_For_Network</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/bootstrap.php.html#116">WP_PHPUnit_Util_Getopt</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="includes/factory.php.html#299">WP_UnitTest_Factory_For_Thing</a></td><td class="text-right">930</td></tr>
+       <tr><td><a href="includes/utils.php.html#24">MockAction</a></td><td class="text-right">650</td></tr>
+       <tr><td><a href="includes/testcase-canonical.php.html#3">WP_Canonical_UnitTestCase</a></td><td class="text-right">462</td></tr>
+       <tr><td><a href="includes/bootstrap.php.html#116">WP_PHPUnit_Util_Getopt</a></td><td class="text-right">306</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#17">WP_Ajax_UnitTestCase</a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="includes/factory.php.html#253">WP_UnitTest_Factory_For_Term</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="includes/utils.php.html#131">testXMLParser</a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="includes/trac.php.html#3">TracTickets</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="includes/factory.php.html#184">WP_UnitTest_Factory_For_Blog</a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="includes/factory.php.html#220">WP_UnitTest_Factory_For_Network</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="includes/factory.php.html#92">WP_UnitTest_Factory_For_Attachment</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="includes/factory.php.html#403">WP_UnitTest_Generator_Sequence</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="includes/testcase-rest-api.php.html#3">WP_Test_REST_TestCase</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="includes/factory.php.html#3">WP_UnitTest_Factory</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="includes/testcase-canonical.php.html#136"><abbr title="WP_Canonical_UnitTestCase::delete_shared_fixtures">delete_shared_fixtures</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-canonical.php.html#41"><abbr title="WP_Canonical_UnitTestCase::generate_shared_fixtures">generate_shared_fixtures</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-canonical.php.html#18"><abbr title="WP_Canonical_UnitTestCase::setUp">setUp</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#181"><abbr title="WP_Ajax_UnitTestCase::_handleAjax">_handleAjax</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-canonical.php.html#168"><abbr title="WP_Canonical_UnitTestCase::assertCanonical">assertCanonical</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-canonical.php.html#226"><abbr title="WP_Canonical_UnitTestCase::get_canonical">get_canonical</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-xmlrpc.php.html#25"><abbr title="WP_XMLRPC_UnitTestCase::make_user_by_role">make_user_by_role</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-xmlrpc.php.html#17"><abbr title="WP_XMLRPC_UnitTestCase::tearDown">tearDown</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-xmlrpc.php.html#9"><abbr title="WP_XMLRPC_UnitTestCase::setUp">setUp</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-rest-api.php.html#4"><abbr title="WP_Test_REST_TestCase::assertErrorResponse">assertErrorResponse</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#168"><abbr title="WP_Ajax_UnitTestCase::_setRole">_setRole</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#149"><abbr title="WP_Ajax_UnitTestCase::dieHandler">dieHandler</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/spy-rest-server.php.html#28"><abbr title="Spy_REST_Server::send_header">send_header</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/spy-rest-server.php.html#24"><abbr title="Spy_REST_Server::__call">__call</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/spy-rest-server.php.html#13"><abbr title="Spy_REST_Server::get_raw_endpoint_data">get_raw_endpoint_data</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/mock-mailer.php.html#15"><abbr title="MockPHPMailer::postSend">postSend</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/spy-rest-server.php.html#32"><abbr title="Spy_REST_Server::serve_request">serve_request</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#59"><abbr title="WP_Ajax_UnitTestCase::setUpBeforeClass">setUpBeforeClass</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#130"><abbr title="WP_Ajax_UnitTestCase::getDieHandler">getDieHandler</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#119"><abbr title="WP_Ajax_UnitTestCase::logout">logout</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#104"><abbr title="WP_Ajax_UnitTestCase::tearDown">tearDown</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#82"><abbr title="WP_Ajax_UnitTestCase::setUp">setUp</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/trac.php.html#16"><abbr title="TracTickets::isTracTicketClosed">isTracTicketClosed</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/trac.php.html#47"><abbr title="TracTickets::usingLocalCache">usingLocalCache</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#138"><abbr title="testXMLParser::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#121"><abbr title="MockAction::get_args">get_args</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#112"><abbr title="MockAction::get_tags">get_tags</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#100"><abbr title="MockAction::get_call_count">get_call_count</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#147"><abbr title="testXMLParser::parse">parse</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#158"><abbr title="testXMLParser::startHandler">startHandler</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#389"><abbr title="wpdb_exposed_methods_for_testing::__call">__call</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#379"><abbr title="wpdb_exposed_methods_for_testing::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#169"><abbr title="testXMLParser::endHandler">endHandler</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#164"><abbr title="testXMLParser::dataHandler">dataHandler</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#95"><abbr title="MockAction::get_events">get_events</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#86"><abbr title="MockAction::filterall">filterall</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#40"><abbr title="MockAction::current_filter">current_filter</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#36"><abbr title="MockAction::reset">reset</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#31"><abbr title="MockAction::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/trac.php.html#53"><abbr title="TracTickets::forcingKnownBugs">forcingKnownBugs</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#47"><abbr title="MockAction::action">action</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#54"><abbr title="MockAction::action2">action2</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#78"><abbr title="MockAction::filter_append">filter_append</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#70"><abbr title="MockAction::filter2">filter2</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/utils.php.html#62"><abbr title="MockAction::filter">filter</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/mock-mailer.php.html#7"><abbr title="MockPHPMailer::preSend">preSend</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/functions.php.html#68"><abbr title="Basic_Object::callMe">callMe</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#179"><abbr title="WP_UnitTest_Factory_For_Comment::get_object_by_id">get_object_by_id</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#174"><abbr title="WP_UnitTest_Factory_For_Comment::create_post_comments">create_post_comments</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#169"><abbr title="WP_UnitTest_Factory_For_Comment::update_object">update_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#165"><abbr title="WP_UnitTest_Factory_For_Comment::create_object">create_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#186"><abbr title="WP_UnitTest_Factory_For_Blog::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#197"><abbr title="WP_UnitTest_Factory_For_Blog::create_object">create_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#248"><abbr title="WP_UnitTest_Factory_For_Network::get_object_by_id">get_object_by_id</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#233"><abbr title="WP_UnitTest_Factory_For_Network::create_object">create_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#222"><abbr title="WP_UnitTest_Factory_For_Network::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#214"><abbr title="WP_UnitTest_Factory_For_Blog::get_object_by_id">get_object_by_id</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#155"><abbr title="WP_UnitTest_Factory_For_Comment::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#148"><abbr title="WP_UnitTest_Factory_For_User::get_object_by_id">get_object_by_id</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#82"><abbr title="WP_UnitTest_Factory_For_Post::update_object">update_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#78"><abbr title="WP_UnitTest_Factory_For_Post::create_object">create_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#67"><abbr title="WP_UnitTest_Factory_For_Post::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#50"><abbr title="WP_UnitTest_Factory::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#87"><abbr title="WP_UnitTest_Factory_For_Post::get_object_by_id">get_object_by_id</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#94"><abbr title="WP_UnitTest_Factory_For_Attachment::create_object">create_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#143"><abbr title="WP_UnitTest_Factory_For_User::update_object">update_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#139"><abbr title="WP_UnitTest_Factory_For_User::create_object">create_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#130"><abbr title="WP_UnitTest_Factory_For_User::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#98"><abbr title="WP_UnitTest_Factory_For_Attachment::create_upload_object">create_upload_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#258"><abbr title="WP_UnitTest_Factory_For_Term::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#268"><abbr title="WP_UnitTest_Factory_For_Term::create_object">create_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#428"><abbr title="WP_UnitTest_Factory_Callback_After_Create::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#418"><abbr title="WP_UnitTest_Generator_Sequence::next">next</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#408"><abbr title="WP_UnitTest_Generator_Sequence::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#386"><abbr title="WP_UnitTest_Factory_For_Thing::addslashes_deep">addslashes_deep</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#432"><abbr title="WP_UnitTest_Factory_Callback_After_Create::call">call</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/functions.php.html#48"><abbr title="Basic_Object::__get">__get</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/functions.php.html#64"><abbr title="Basic_Object::__call">__call</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/functions.php.html#60"><abbr title="Basic_Object::__unset">__unset</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/functions.php.html#56"><abbr title="Basic_Object::__isset">__isset</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/functions.php.html#52"><abbr title="Basic_Object::__set">__set</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#382"><abbr title="WP_UnitTest_Factory_For_Thing::callback">callback</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#374"><abbr title="WP_UnitTest_Factory_For_Thing::apply_callbacks">apply_callbacks</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#294"><abbr title="WP_UnitTest_Factory_For_Term::get_object_by_id">get_object_by_id</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#288"><abbr title="WP_UnitTest_Factory_For_Term::create_and_get">create_and_get</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#284"><abbr title="WP_UnitTest_Factory_For_Term::add_post_terms">add_post_terms</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#276"><abbr title="WP_UnitTest_Factory_For_Term::update_object">update_object</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#312"><abbr title="WP_UnitTest_Factory_For_Thing::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#320"><abbr title="WP_UnitTest_Factory_For_Thing::create">create</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#353"><abbr title="WP_UnitTest_Factory_For_Thing::generate_args">generate_args</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#345"><abbr title="WP_UnitTest_Factory_For_Thing::create_many">create_many</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/factory.php.html#338"><abbr title="WP_UnitTest_Factory_For_Thing::create_and_get">create_and_get</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="includes/bootstrap.php.html#121"><abbr title="WP_PHPUnit_Util_Getopt::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="includes/bootstrap.php.html#121"><abbr title="WP_PHPUnit_Util_Getopt::__construct">__construct</abbr></a></td><td class="text-right">306</td></tr>
+       <tr><td><a href="includes/testcase-canonical.php.html#168"><abbr title="WP_Canonical_UnitTestCase::assertCanonical">assertCanonical</abbr></a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="includes/factory.php.html#353"><abbr title="WP_UnitTest_Factory_For_Thing::generate_args">generate_args</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="includes/factory.php.html#320"><abbr title="WP_UnitTest_Factory_For_Thing::create">create</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="includes/trac.php.html#16"><abbr title="TracTickets::isTracTicketClosed">isTracTicketClosed</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="includes/factory.php.html#386"><abbr title="WP_UnitTest_Factory_For_Thing::addslashes_deep">addslashes_deep</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="includes/testcase-canonical.php.html#136"><abbr title="WP_Canonical_UnitTestCase::delete_shared_fixtures">delete_shared_fixtures</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="includes/utils.php.html#100"><abbr title="MockAction::get_call_count">get_call_count</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#59"><abbr title="WP_Ajax_UnitTestCase::setUpBeforeClass">setUpBeforeClass</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="includes/factory.php.html#98"><abbr title="WP_UnitTest_Factory_For_Attachment::create_upload_object">create_upload_object</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="includes/testcase-rest-api.php.html#4"><abbr title="WP_Test_REST_TestCase::assertErrorResponse">assertErrorResponse</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="includes/factory.php.html#197"><abbr title="WP_UnitTest_Factory_For_Blog::create_object">create_object</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#149"><abbr title="WP_Ajax_UnitTestCase::dieHandler">dieHandler</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="includes/utils.php.html#54"><abbr title="MockAction::action2">action2</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/utils.php.html#158"><abbr title="testXMLParser::startHandler">startHandler</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/utils.php.html#169"><abbr title="testXMLParser::endHandler">endHandler</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/utils.php.html#70"><abbr title="MockAction::filter2">filter2</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/utils.php.html#147"><abbr title="testXMLParser::parse">parse</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/utils.php.html#112"><abbr title="MockAction::get_tags">get_tags</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/utils.php.html#86"><abbr title="MockAction::filterall">filterall</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/utils.php.html#47"><abbr title="MockAction::action">action</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/utils.php.html#121"><abbr title="MockAction::get_args">get_args</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/utils.php.html#78"><abbr title="MockAction::filter_append">filter_append</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/utils.php.html#62"><abbr title="MockAction::filter">filter</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#181"><abbr title="WP_Ajax_UnitTestCase::_handleAjax">_handleAjax</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/factory.php.html#268"><abbr title="WP_UnitTest_Factory_For_Term::create_object">create_object</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/factory.php.html#276"><abbr title="WP_UnitTest_Factory_For_Term::update_object">update_object</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/factory.php.html#258"><abbr title="WP_UnitTest_Factory_For_Term::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/factory.php.html#233"><abbr title="WP_UnitTest_Factory_For_Network::create_object">create_object</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/factory.php.html#50"><abbr title="WP_UnitTest_Factory::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/factory.php.html#288"><abbr title="WP_UnitTest_Factory_For_Term::create_and_get">create_and_get</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/factory.php.html#345"><abbr title="WP_UnitTest_Factory_For_Thing::create_many">create_many</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/testcase-canonical.php.html#226"><abbr title="WP_Canonical_UnitTestCase::get_canonical">get_canonical</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/testcase-ajax.php.html#119"><abbr title="WP_Ajax_UnitTestCase::logout">logout</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/factory.php.html#408"><abbr title="WP_UnitTest_Generator_Sequence::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/factory.php.html#374"><abbr title="WP_UnitTest_Factory_For_Thing::apply_callbacks">apply_callbacks</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="includes/utils.php.html#40"><abbr title="MockAction::current_filter">current_filter</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 2.2.3</a> using <a href="http://php.net/" target="_top">PHP 5.5.9-1ubuntu4.13</a> and <a href="http://phpunit.de/">PHPUnit 4.8.9</a> at Wed Jan 27 15:16:26 UTC 2016.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../js/holder.min.js" type="text/javascript"></script>
+  <script src="../../js/d3.min.js" type="text/javascript"></script>
+  <script src="../../js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([23,0,0,0,0,0,0,0,0,0,0,2], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([93,0,0,0,0,0,0,0,0,0,0,5], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,17,"<a href=\"includes\/bootstrap.php.html#116\">WP_PHPUnit_Util_Getopt<\/a>"],[0,2,"<a href=\"includes\/factory.php.html#3\">WP_UnitTest_Factory<\/a>"],[0,4,"<a href=\"includes\/factory.php.html#65\">WP_UnitTest_Factory_For_Post<\/a>"],[0,4,"<a href=\"includes\/factory.php.html#92\">WP_UnitTest_Factory_For_Attachment<\/a>"],[0,4,"<a href=\"includes\/factory.php.html#128\">WP_UnitTest_Factory_For_User<\/a>"],[0,5,"<a href=\"includes\/factory.php.html#153\">WP_UnitTest_Factory_For_Comment<\/a>"],[0,6,"<a href=\"includes\/factory.php.html#184\">WP_UnitTest_Factory_For_Blog<\/a>"],[0,5,"<a href=\"includes\/factory.php.html#220\">WP_UnitTest_Factory_For_Network<\/a>"],[0,10,"<a href=\"includes\/factory.php.html#253\">WP_UnitTest_Factory_For_Term<\/a>"],[0,30,"<a href=\"includes\/factory.php.html#299\">WP_UnitTest_Factory_For_Thing<\/a>"],[0,3,"<a href=\"includes\/factory.php.html#403\">WP_UnitTest_Generator_Sequence<\/a>"],[0,2,"<a href=\"includes\/factory.php.html#425\">WP_UnitTest_Factory_Callback_After_Create<\/a>"],[0,6,"<a href=\"includes\/functions.php.html#45\">Basic_Object<\/a>"],[100,0,"<a href=\"includes\/functions.php.html#73\">Basic_Subclass<\/a>"],[0,2,"<a href=\"includes\/mock-mailer.php.html#4\">MockPHPMailer<\/a>"],[0,4,"<a href=\"includes\/spy-rest-server.php.html#3\">Spy_REST_Server<\/a>"],[0,15,"<a href=\"includes\/testcase-ajax.php.html#17\">WP_Ajax_UnitTestCase<\/a>"],[0,21,"<a href=\"includes\/testcase-canonical.php.html#3\">WP_Canonical_UnitTestCase<\/a>"],[0,3,"<a href=\"includes\/testcase-rest-api.php.html#3\">WP_Test_REST_TestCase<\/a>"],[0,3,"<a href=\"includes\/testcase-xmlrpc.php.html#6\">WP_XMLRPC_UnitTestCase<\/a>"],[0,7,"<a href=\"includes\/trac.php.html#3\">TracTickets<\/a>"],[0,25,"<a href=\"includes\/utils.php.html#24\">MockAction<\/a>"],[0,8,"<a href=\"includes\/utils.php.html#131\">testXMLParser<\/a>"],[100,0,"<a href=\"includes\/utils.php.html#279\">MockClass<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#378\">wpdb_exposed_methods_for_testing<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,17,"<a href=\"includes\/bootstrap.php.html#121\">WP_PHPUnit_Util_Getopt::__construct<\/a>"],[0,2,"<a href=\"includes\/factory.php.html#50\">WP_UnitTest_Factory::__construct<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#67\">WP_UnitTest_Factory_For_Post::__construct<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#78\">WP_UnitTest_Factory_For_Post::create_object<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#82\">WP_UnitTest_Factory_For_Post::update_object<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#87\">WP_UnitTest_Factory_For_Post::get_object_by_id<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#94\">WP_UnitTest_Factory_For_Attachment::create_object<\/a>"],[0,3,"<a href=\"includes\/factory.php.html#98\">WP_UnitTest_Factory_For_Attachment::create_upload_object<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#130\">WP_UnitTest_Factory_For_User::__construct<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#139\">WP_UnitTest_Factory_For_User::create_object<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#143\">WP_UnitTest_Factory_For_User::update_object<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#148\">WP_UnitTest_Factory_For_User::get_object_by_id<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#155\">WP_UnitTest_Factory_For_Comment::__construct<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#165\">WP_UnitTest_Factory_For_Comment::create_object<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#169\">WP_UnitTest_Factory_For_Comment::update_object<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#174\">WP_UnitTest_Factory_For_Comment::create_post_comments<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#179\">WP_UnitTest_Factory_For_Comment::get_object_by_id<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#186\">WP_UnitTest_Factory_For_Blog::__construct<\/a>"],[0,3,"<a href=\"includes\/factory.php.html#197\">WP_UnitTest_Factory_For_Blog::create_object<\/a>"],[100,1,"<a href=\"includes\/factory.php.html#212\">WP_UnitTest_Factory_For_Blog::update_object<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#214\">WP_UnitTest_Factory_For_Blog::get_object_by_id<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#222\">WP_UnitTest_Factory_For_Network::__construct<\/a>"],[0,2,"<a href=\"includes\/factory.php.html#233\">WP_UnitTest_Factory_For_Network::create_object<\/a>"],[100,1,"<a href=\"includes\/factory.php.html#246\">WP_UnitTest_Factory_For_Network::update_object<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#248\">WP_UnitTest_Factory_For_Network::get_object_by_id<\/a>"],[0,2,"<a href=\"includes\/factory.php.html#258\">WP_UnitTest_Factory_For_Term::__construct<\/a>"],[0,2,"<a href=\"includes\/factory.php.html#268\">WP_UnitTest_Factory_For_Term::create_object<\/a>"],[0,2,"<a href=\"includes\/factory.php.html#276\">WP_UnitTest_Factory_For_Term::update_object<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#284\">WP_UnitTest_Factory_For_Term::add_post_terms<\/a>"],[0,2,"<a href=\"includes\/factory.php.html#288\">WP_UnitTest_Factory_For_Term::create_and_get<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#294\">WP_UnitTest_Factory_For_Term::get_object_by_id<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#312\">WP_UnitTest_Factory_For_Thing::__construct<\/a>"],[100,1,"<a href=\"includes\/factory.php.html#317\">WP_UnitTest_Factory_For_Thing::create_object<\/a>"],[100,1,"<a href=\"includes\/factory.php.html#318\">WP_UnitTest_Factory_For_Thing::update_object<\/a>"],[0,7,"<a href=\"includes\/factory.php.html#320\">WP_UnitTest_Factory_For_Thing::create<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#338\">WP_UnitTest_Factory_For_Thing::create_and_get<\/a>"],[100,1,"<a href=\"includes\/factory.php.html#343\">WP_UnitTest_Factory_For_Thing::get_object_by_id<\/a>"],[0,2,"<a href=\"includes\/factory.php.html#345\">WP_UnitTest_Factory_For_Thing::create_many<\/a>"],[0,8,"<a href=\"includes\/factory.php.html#353\">WP_UnitTest_Factory_For_Thing::generate_args<\/a>"],[0,2,"<a href=\"includes\/factory.php.html#374\">WP_UnitTest_Factory_For_Thing::apply_callbacks<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#382\">WP_UnitTest_Factory_For_Thing::callback<\/a>"],[0,5,"<a href=\"includes\/factory.php.html#386\">WP_UnitTest_Factory_For_Thing::addslashes_deep<\/a>"],[0,2,"<a href=\"includes\/factory.php.html#408\">WP_UnitTest_Generator_Sequence::__construct<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#418\">WP_UnitTest_Generator_Sequence::next<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#428\">WP_UnitTest_Factory_Callback_After_Create::__construct<\/a>"],[0,1,"<a href=\"includes\/factory.php.html#432\">WP_UnitTest_Factory_Callback_After_Create::call<\/a>"],[0,1,"<a href=\"includes\/functions.php.html#48\">Basic_Object::__get<\/a>"],[0,1,"<a href=\"includes\/functions.php.html#52\">Basic_Object::__set<\/a>"],[0,1,"<a href=\"includes\/functions.php.html#56\">Basic_Object::__isset<\/a>"],[0,1,"<a href=\"includes\/functions.php.html#60\">Basic_Object::__unset<\/a>"],[0,1,"<a href=\"includes\/functions.php.html#64\">Basic_Object::__call<\/a>"],[0,1,"<a href=\"includes\/functions.php.html#68\">Basic_Object::callMe<\/a>"],[0,1,"<a href=\"includes\/mock-mailer.php.html#7\">MockPHPMailer::preSend<\/a>"],[0,1,"<a href=\"includes\/mock-mailer.php.html#15\">MockPHPMailer::postSend<\/a>"],[0,1,"<a href=\"includes\/spy-rest-server.php.html#13\">Spy_REST_Server::get_raw_endpoint_data<\/a>"],[0,1,"<a href=\"includes\/spy-rest-server.php.html#24\">Spy_REST_Server::__call<\/a>"],[0,1,"<a href=\"includes\/spy-rest-server.php.html#28\">Spy_REST_Server::send_header<\/a>"],[0,1,"<a href=\"includes\/spy-rest-server.php.html#32\">Spy_REST_Server::serve_request<\/a>"],[0,4,"<a href=\"includes\/testcase-ajax.php.html#59\">WP_Ajax_UnitTestCase::setUpBeforeClass<\/a>"],[0,1,"<a href=\"includes\/testcase-ajax.php.html#82\">WP_Ajax_UnitTestCase::setUp<\/a>"],[0,1,"<a href=\"includes\/testcase-ajax.php.html#104\">WP_Ajax_UnitTestCase::tearDown<\/a>"],[0,2,"<a href=\"includes\/testcase-ajax.php.html#119\">WP_Ajax_UnitTestCase::logout<\/a>"],[0,1,"<a href=\"includes\/testcase-ajax.php.html#130\">WP_Ajax_UnitTestCase::getDieHandler<\/a>"],[0,3,"<a href=\"includes\/testcase-ajax.php.html#149\">WP_Ajax_UnitTestCase::dieHandler<\/a>"],[0,1,"<a href=\"includes\/testcase-ajax.php.html#168\">WP_Ajax_UnitTestCase::_setRole<\/a>"],[0,2,"<a href=\"includes\/testcase-ajax.php.html#181\">WP_Ajax_UnitTestCase::_handleAjax<\/a>"],[0,1,"<a href=\"includes\/testcase-canonical.php.html#18\">WP_Canonical_UnitTestCase::setUp<\/a>"],[0,1,"<a href=\"includes\/testcase-canonical.php.html#41\">WP_Canonical_UnitTestCase::generate_shared_fixtures<\/a>"],[0,4,"<a href=\"includes\/testcase-canonical.php.html#136\">WP_Canonical_UnitTestCase::delete_shared_fixtures<\/a>"],[0,13,"<a href=\"includes\/testcase-canonical.php.html#168\">WP_Canonical_UnitTestCase::assertCanonical<\/a>"],[0,2,"<a href=\"includes\/testcase-canonical.php.html#226\">WP_Canonical_UnitTestCase::get_canonical<\/a>"],[0,3,"<a href=\"includes\/testcase-rest-api.php.html#4\">WP_Test_REST_TestCase::assertErrorResponse<\/a>"],[0,1,"<a href=\"includes\/testcase-xmlrpc.php.html#9\">WP_XMLRPC_UnitTestCase::setUp<\/a>"],[0,1,"<a href=\"includes\/testcase-xmlrpc.php.html#17\">WP_XMLRPC_UnitTestCase::tearDown<\/a>"],[0,1,"<a href=\"includes\/testcase-xmlrpc.php.html#25\">WP_XMLRPC_UnitTestCase::make_user_by_role<\/a>"],[0,5,"<a href=\"includes\/trac.php.html#16\">TracTickets::isTracTicketClosed<\/a>"],[0,1,"<a href=\"includes\/trac.php.html#47\">TracTickets::usingLocalCache<\/a>"],[0,1,"<a href=\"includes\/trac.php.html#53\">TracTickets::forcingKnownBugs<\/a>"],[0,1,"<a href=\"includes\/utils.php.html#31\">MockAction::__construct<\/a>"],[0,1,"<a href=\"includes\/utils.php.html#36\">MockAction::reset<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#40\">MockAction::current_filter<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#47\">MockAction::action<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#54\">MockAction::action2<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#62\">MockAction::filter<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#70\">MockAction::filter2<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#78\">MockAction::filter_append<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#86\">MockAction::filterall<\/a>"],[0,1,"<a href=\"includes\/utils.php.html#95\">MockAction::get_events<\/a>"],[0,4,"<a href=\"includes\/utils.php.html#100\">MockAction::get_call_count<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#112\">MockAction::get_tags<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#121\">MockAction::get_args<\/a>"],[0,1,"<a href=\"includes\/utils.php.html#138\">testXMLParser::__construct<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#147\">testXMLParser::parse<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#158\">testXMLParser::startHandler<\/a>"],[0,1,"<a href=\"includes\/utils.php.html#164\">testXMLParser::dataHandler<\/a>"],[0,2,"<a href=\"includes\/utils.php.html#169\">testXMLParser::endHandler<\/a>"],[0,1,"<a href=\"includes\/utils.php.html#379\">wpdb_exposed_methods_for_testing::__construct<\/a>"],[0,1,"<a href=\"includes\/utils.php.html#389\">wpdb_exposed_methods_for_testing::__call<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

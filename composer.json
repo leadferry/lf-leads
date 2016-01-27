@@ -4,9 +4,6 @@
 	"require": {
 		"wordpress/wp-list-table": "~3.8"
 	},
-	"require-dev": {
-        "phpunit/phpunit": "4.8.*"
-    },
 	"repositories": [
 		{
 			"type": "package",

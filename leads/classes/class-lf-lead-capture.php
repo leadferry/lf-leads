@@ -6,9 +6,6 @@
  */
 class LF_Lead_Capture {
 
-	public $lead_name;
-	public $lead_email;
-
 	/**
 	 * Prepare data to be posted
 	 * 
@@ -25,7 +22,7 @@ class LF_Lead_Capture {
 				'form' => array(
 					'reference' => isset( $lead['form_id'] ) ? $lead['form_id'] : 'Not Available',
 					'source' => isset( $lead['source'] ) ? $lead['source'] : "3rd Party",
-					'provider' => $lead['provider'],
+					'provider' => isset( $lead['provider'] ) ? $lead['provider'] : 'Not Available',
 				),
 			),
 			'properties' => array(
@@ -49,8 +46,6 @@ class LF_Lead_Capture {
 	 * 
 	 */
 	public function post_data( $args ) {
-
-		wp_die($args);
 
 		$public_key = get_option(LF_PREFIX . 'public_key');
 		$defaults = array(

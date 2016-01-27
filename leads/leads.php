@@ -78,6 +78,7 @@ add_action( 'admin_menu', 'lf_lead_user_profile_page' );
 function lf_lead_user_profile_page() {
 	$lf_users_page = plugin_basename(LEADFERRY_PATH . 'leads/profile.php');
 	add_users_page( 'User Profile', 'User Profile', 'manage_options', $lf_users_page, '', '', 71 );
+	
 	add_action( "load-$lf_users_page", 'lf_users_page_screen_options' );
 }
 
@@ -92,6 +93,8 @@ function lf_users_page_screen_options() {
 
 add_filter( 'set-screen-option', 'lf_set_screen_option', 10, 3 );
 function lf_set_screen_option( $status, $option, $value ) {
+
+	wp_die(var_dump( $status, $option, $value ));
 	if( 'lf_per_page' == $option )
 		return $value;
 }
@@ -102,6 +105,11 @@ require_once(dirname(__FILE__) . '/classes/class-lf-settings-page.php');
 
 // Lead Capture Support
 $product = get_option('lf_lead_forms');
-if( $product && $product['selected_product'] != "none" ) {
-	require_once(dirname(__FILE__) . '/classes/vendors/class-lf-'. $product['selected_product'] .'.php');
+
+function lf_support( $product ) {
+	if( $product && $product['selected_product'] != "none" ) {
+		require_once(dirname(__FILE__) . '/classes/vendors/class-lf-'. $product['selected_product'] .'.php');
+	}
 }
+
+lf_support( $product );
