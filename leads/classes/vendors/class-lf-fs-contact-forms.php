@@ -13,17 +13,17 @@ class LF_FS_Contact_Forms extends LF_Lead_Capture {
 	 * Capture lead
 	 *
 	 */
-	public function capture_lead( $form) {
+	public function capture_lead( $form ) {
 
 		$form_data = $form->posted_data;
 		$options = get_option( 'lf_fscf_options' );
 
-		/* The form automatically converts the label of new fields in format such as 
+		/* The form automatically converts the label of new fields in format such as
 		First-Name (for label First Name), Last-Name( for label Last Name ) and so on */
 
-		$first_name = !empty( $options['lead_first_name'] ) ? str_replace( ' ', '-', $options['lead_first_name']) : 'from_name'; 
-		$last_name = !empty( $options['lead_last_name'] ) ? str_replace( ' ', '-', $options['lead_last_name']) : ''; 
-		$email = !empty( $options['lead_email'] ) ? str_replace( ' ', '-', $options['lead_email']) : 'from_email'; 
+		$first_name = !empty( $options['lead_first_name'] ) ? str_replace( ' ', '-', $options['lead_first_name']) : 'from_name';
+		$last_name = !empty( $options['lead_last_name'] ) ? str_replace( ' ', '-', $options['lead_last_name']) : '';
+		$email = !empty( $options['lead_email'] ) ? str_replace( ' ', '-', $options['lead_email']) : 'from_email';
 
 		$lead['provider'] = "Fast & Secure contact forms";
 		// $lead['form_id'] = $_POST['form_id'];
@@ -35,12 +35,12 @@ class LF_FS_Contact_Forms extends LF_Lead_Capture {
 
 		$data = $this->prepare_data( $lead );
 		$this->post_data( $data );
-		
+
 	}
 
 	/**
 	 * Allows user to provide names for name & email fields
-	 * 
+	 *
 	 */
 	public function init_settings() {
 		register_setting( 'lf_lead_capture_options', 'lf_fscf_options', array( $this, 'validate_options' ) );
@@ -52,7 +52,7 @@ class LF_FS_Contact_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Sanatizes options value
-	 * 
+	 *
 	 */
 	public function validate_options( $input ) {
 
@@ -65,20 +65,15 @@ class LF_FS_Contact_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Output for settings section
-	 * 
+	 *
 	 */
-	public function settings_section_text() { ?>
-		<h2>Fast & Secure Contact Forms Settings</h2>
-		<p>
-			If you have added First Name, Last Name or Email fields manually, please specify the Labels ( case sensitive ) for those fields below. 
-			<br/>Leave blank for default form.
-	   	</p>
-
-	<?php }
+	public function settings_section_text() {
+		echo '<h2>Fast & Secure Contact Forms Settings</h2><p>If you have added First Name, Last Name or Email fields manually, please specify the Labels ( case sensitive ) for those fields below.<br/>Leave blank for default form.</p>';
+	}
 
 	/**
 	 * Lead First Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_first_name_callback() {
 		$options = get_option( 'lf_fscf_options' );
@@ -88,7 +83,7 @@ class LF_FS_Contact_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Lead Last Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_last_name_callback() {
 		$options = get_option( 'lf_fscf_options' );
@@ -98,7 +93,7 @@ class LF_FS_Contact_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Lead Email field
-	 * 
+	 *
 	 */
 	public function lf_lead_email_callback() {
 		$options = get_option( 'lf_fscf_options' );

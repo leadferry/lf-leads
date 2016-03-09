@@ -32,7 +32,7 @@ class LF_Ninja_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Allows user to provide names for name & email fields
-	 * 
+	 *
 	 */
 	public function init_settings(){
 		register_setting( 'lf_lead_capture_options', 'lf_ninja_options', array( $this, 'validate_options' ) );
@@ -44,7 +44,7 @@ class LF_Ninja_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Sanatizes options value
-	 * 
+	 *
 	 */
 	public function validate_options( $input ) {
 
@@ -57,17 +57,15 @@ class LF_Ninja_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Output for settings section
-	 * 
+	 *
 	 */
-	public function settings_section_text() { ?>
-		<h2>Ninja Forms Settings</h2>
-		<p>Please provide field IDs for the follwing fields in Ninja Forms. You can find the IDs while creating or editing these fields on the Ninja Forms plugin page  </p>
-
-	<?php }
+	public function settings_section_text() {
+		echo '<h2>Ninja Forms Settings</h2><p>Please provide field IDs for the follwing fields in Ninja Forms. You can find the IDs while creating or editing these fields on the Ninja Forms plugin page  </p>';
+	}
 
 	/**
 	 * Lead First Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_first_name_callback() {
 		$options = get_option( 'lf_ninja_options' );
@@ -77,7 +75,7 @@ class LF_Ninja_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Lead Last Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_last_name_callback() {
 		$options = get_option( 'lf_ninja_options' );
@@ -87,7 +85,7 @@ class LF_Ninja_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Lead Email field
-	 * 
+	 *
 	 */
 	public function lf_lead_email_callback() {
 		$options = get_option( 'lf_ninja_options' );

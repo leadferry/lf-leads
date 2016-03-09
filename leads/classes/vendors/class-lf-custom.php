@@ -16,7 +16,7 @@ class LF_Custom extends LF_Lead_Capture {
 	 *
 	 */
 	public function custom_capture_lead() {
-		
+
 		$lead['provider'] = "Custom Form";
 
 		if( isset( $_POST['form_id'] ) )
@@ -32,12 +32,12 @@ class LF_Custom extends LF_Lead_Capture {
 			$lead['email'] = $_POST['email'];
 
 		$data = $this->prepare_data( $lead );
-		$this->post_data( $data );		
+		$this->post_data( $data );
 	}
-	
+
 	/**
 	 * Allows user to provide names for name & email fields
-	 * 
+	 *
 	 */
 	public function init_settings(){
 		register_setting( 'lf_lead_capture_options', 'lf_custom_options', array( $this, 'validate_options' ) );
@@ -50,11 +50,10 @@ class LF_Custom extends LF_Lead_Capture {
 
 	/**
 	 * Sanatizes options value
-	 * 
+	 *
 	 */
 	public function validate_options( $input ) {
 
-		$options = get_option( 'lf_custom_options' );
 		$options['lead_form_id'] = sanitize_text_field( $input['lead_form_id'] );
 		$options['lead_first_name'] = sanitize_text_field( $input['lead_first_name'] );
 		$options['lead_last_name'] = sanitize_text_field( $input['lead_last_name'] );
@@ -64,17 +63,15 @@ class LF_Custom extends LF_Lead_Capture {
 
 	/**
 	 * Output for settings section
-	 * 
+	 *
 	 */
-	public function settings_section_text() { ?>
-		<h2>Settings for any other form</h2>
-		<p>Please provide the IDs for the following fields.  </p>
-
-	<?php }
+	public function settings_section_text() {
+		echo '<h2>Settings for any other form</h2><p>Please provide the IDs for the following fields.</p>';
+	}
 
 	/**
 	 * Form ID
-	 * 
+	 *
 	 */
 	public function lf_lead_form_id_callback() {
 		$options = get_option( 'lf_custom_options' );
@@ -84,7 +81,7 @@ class LF_Custom extends LF_Lead_Capture {
 
 	/**
 	 * Lead First Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_first_name_callback() {
 		$options = get_option( 'lf_custom_options' );
@@ -94,7 +91,7 @@ class LF_Custom extends LF_Lead_Capture {
 
 	/**
 	 * Lead Last Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_last_name_callback() {
 		$options = get_option( 'lf_custom_options' );
@@ -104,7 +101,7 @@ class LF_Custom extends LF_Lead_Capture {
 
 	/**
 	 * Lead Email field
-	 * 
+	 *
 	 */
 	public function lf_lead_email_callback() {
 		$options = get_option( 'lf_custom_options' );
@@ -117,7 +114,7 @@ class LF_Custom extends LF_Lead_Capture {
 	 */
 	public function add_scripts() {
 		$options = get_option( 'lf_custom_options' );
-		$local_data = array( 
+		$local_data = array(
 			'url' => admin_url( 'admin-ajax.php' ),
 			'form_id' => $options['lead_form_id'],
 			'first_name' => $options['lead_first_name'],

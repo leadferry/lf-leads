@@ -9,9 +9,7 @@ class Test_Leads extends WP_UnitTestCase {
 	}
 
 	function test_lead_install_create_table() {
-
 		update_option( 'lf_lead_db_ver', '0.0' );
-
 		lf_lead_install();
 		$this->assertInstanceOf( 'WP_Role', get_role( LF_LEAD ) );
 
@@ -23,9 +21,7 @@ class Test_Leads extends WP_UnitTestCase {
 	}
 
 	function test_lead_update_create_table() {
-
 		update_option( 'lf_lead_db_ver', '0.0' );
-
 		lf_lead_update();
 		$this->assertInstanceOf( 'WP_Role', get_role( LF_LEAD ) );
 	}

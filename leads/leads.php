@@ -25,7 +25,7 @@ function lf_lead_install() {
 
 		update_option( 'lf_lead_db_ver', $lf_lead_db_ver);
 	}
-	
+
 	add_role(LF_LEAD, 'Lead');
 }
 
@@ -48,9 +48,9 @@ function lf_add_lead($lead_id, $user_id, $sync_status) {
 	$lf_lead_db_name = $wpdb->prefix . LF_LEAD;
 
 	$wpdb->insert($lf_lead_db_name, array(
-			'sync_status' => $sync_status,
-			'user_id' => $user_id,
-			'lead_id' => $lead_id,
+		'sync_status' => $sync_status,
+		'user_id' => $user_id,
+		'lead_id' => $lead_id,
 	));
 }
 
@@ -60,7 +60,7 @@ function lf_add_lead($lead_id, $user_id, $sync_status) {
 add_filter( 'get_edit_user_link', 'lf_get_edit_lead_link', 10, 2 );
 function lf_get_edit_lead_link( $link, $user_id ) {
     global $role;
-    
+
     if(isset($role) && $role==LF_LEAD) {
         $link = add_query_arg( array(
                 'role' => LF_LEAD,
@@ -78,7 +78,6 @@ add_action( 'admin_menu', 'lf_lead_user_profile_page' );
 function lf_lead_user_profile_page() {
 	$lf_users_page = plugin_basename(LEADFERRY_PATH . 'leads/profile.php');
 	add_users_page( 'User Profile', 'User Profile', 'manage_options', $lf_users_page, '', '', 71 );
-	
 	add_action( "load-$lf_users_page", 'lf_users_page_screen_options' );
 }
 
@@ -95,10 +94,10 @@ add_filter( 'set-screen-option', 'lf_set_screen_option', 10, 3 );
 function lf_set_screen_option( $status, $option, $value ) {
 
 	wp_die(var_dump( $status, $option, $value ));
-	if( 'lf_per_page' == $option )
+	if( 'lf_per_page' == $option ){
 		return $value;
+	}
 }
-
 
 // Settings Page
 require_once(dirname(__FILE__) . '/classes/class-lf-settings-page.php');
@@ -108,7 +107,7 @@ $product = get_option('lf_lead_forms');
 
 function lf_support( $product ) {
 	if( $product && $product['selected_product'] != "none" ) {
-		require_once(dirname(__FILE__) . '/classes/vendors/class-lf-'. $product['selected_product'] .'.php');
+		require_once(dirname(__FILE__) . '/classes/vendors/class-lf-'. $product['selected_product'] . '.php');
 	}
 }
 

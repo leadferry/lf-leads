@@ -16,7 +16,7 @@ class LF_Seedprod extends LF_Lead_Capture {
 	 *
 	 */
 	public function seedprod_capture_lead() {
-		
+
 		$lead['provider'] = "seedprod";
 		$lead['form_id'] = $_POST['form_id'];
 		$lead['first_name'] = $_POST['name'];
@@ -24,12 +24,12 @@ class LF_Seedprod extends LF_Lead_Capture {
 
 		$data = $this->prepare_data( $lead );
 		$this->post_data( $data );
-		
+
 	}
 
 	/**
 	 * Allows user to provide names for name & email fields
-	 * 
+	 *
 	 */
 	public function init_settings(){
 		register_setting( 'lf_lead_capture_options', 'lf_seedprod_options', array( $this, 'validate_options' ) );
@@ -41,7 +41,7 @@ class LF_Seedprod extends LF_Lead_Capture {
 
 	/**
 	 * Sanatizes options value
-	 * 
+	 *
 	 */
 	public function validate_options( $input ) {
 
@@ -54,16 +54,15 @@ class LF_Seedprod extends LF_Lead_Capture {
 
 	/**
 	 * Output for settings section
-	 * 
+	 *
 	 */
-	public function settings_section_text() { ?>
-		<h2>Seedprod Settings</h2>
-		<p>Please provide the IDs for following fields in Seedprod form
-	<?php }
+	public function settings_section_text() {
+		echo '<h2>Seedprod Settings</h2><p>Please provide the IDs for following fields in Seedprod form</p>';
+		}
 
 	/**
 	 * Form ID field
-	 * 
+	 *
 	 */
 	public function lf_lead_form_id_callback() {
 		$options = get_option( 'lf_seedprod_options' );
@@ -73,7 +72,7 @@ class LF_Seedprod extends LF_Lead_Capture {
 
 	/**
 	 * Lead Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_name_callback() {
 		$options = get_option( 'lf_seedprod_options' );
@@ -83,7 +82,7 @@ class LF_Seedprod extends LF_Lead_Capture {
 
 	/**
 	 * Lead Email field
-	 * 
+	 *
 	 */
 	public function lf_lead_email_callback() {
 		$options = get_option( 'lf_seedprod_options' );
@@ -93,11 +92,11 @@ class LF_Seedprod extends LF_Lead_Capture {
 
 	/**
 	 * Enqueue JS files
-	 * 
+	 *
 	 */
 	public function add_scripts() {
 		$options = get_option( 'lf_seedprod_options' );
-		$local_data = array( 
+		$local_data = array(
 			'url' => admin_url( 'admin-ajax.php' ),
 			'form_id' => $options['lead_form_id'],
 			'name' => $options['lead_name'],

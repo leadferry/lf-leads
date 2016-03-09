@@ -2,7 +2,7 @@
 
 /**
  * Add a settings page in admin
- * 
+ *
  */
 class LF_Settings_Page {
 
@@ -14,7 +14,7 @@ class LF_Settings_Page {
 
 	/**
 	 * Add the menu page
-	 * 
+	 *
 	 */
 	public function lf_lead_settings_page() {
 		$lf_users_page = plugin_basename(LEADFERRY_PATH . 'leads/profile.php');
@@ -23,7 +23,7 @@ class LF_Settings_Page {
 
 	/**
 	 * Callback function to render the page
-	 * 
+	 *
 	 */
 	public function lf_leadferry_settings_callback() {
 		?>
@@ -44,26 +44,17 @@ class LF_Settings_Page {
 
 	/**
 	 * Select the product
-	 * 
+	 *
 	 */
 	public function init_settings(){
-		register_setting( 'lf_lead_forms', 'lf_lead_forms', array( $this, 'validate_options' ) );
+		register_setting( 'lf_lead_forms', 'lf_lead_forms' );
 		add_settings_section( 'lf_lead_capture_section', 'Select Forms/Plugins', array( $this, 'settings_section_text' ), 'lf_select_lead_form' );
 		add_settings_field( 'lf_select_product', 'Supported Products', array( $this, 'lf_product_callback' ), 'lf_select_lead_form', 'lf_lead_capture_section' );
 	}
 
 	/**
-	 * Sanatizes options value
-	 * 
-	 */
-	public function validate_options( $input ) {
-
-		return $input;
-	}
-
-	/**
 	 * Output for settings section
-	 * 
+	 *
 	 */
 	public function settings_section_text() {
 		echo '<p>Choose the plugin or third party forms you are currently using for capturing leads</p>';
@@ -71,7 +62,7 @@ class LF_Settings_Page {
 
 	/**
 	 * Callback for Select box
-	 * 
+	 *
 	 */
 	public function lf_product_callback() {
 		$options = get_option( 'lf_lead_forms' );
@@ -91,7 +82,7 @@ class LF_Settings_Page {
 				<option value="hellobar" <?php selected( $selected_product, 'hellobar' ); ?>>Hellobar</option>
 				<option value="launchpad" <?php selected( $selected_product, 'launchpad' ); ?>>Launchpad</option>
 				<option value="leadsquared" <?php selected( $selected_product, 'leadsquared' ); ?>>Leadsquared</option>
-				<option value="leadsquared-cf7" <?php selected( $selected_product, 'leadsquared-cf7' ); ?>>Leadsquared ( Contact form 7 )</option>
+				<option value="contact-form7" <?php selected( $selected_product, 'contact-form7' ); ?>>Contact form 7</option>
 				<option value="mailchimp" <?php selected( $selected_product, 'mailchimp' ); ?>>Mailchimp</option>
 				<option value="mailpoet" <?php selected( $selected_product, 'mailpoet' ); ?>>Mailpoet</option>
 				<option value="newsletter" <?php selected( $selected_product, 'newsletter' ); ?>>Newsletter</option>

@@ -6,7 +6,7 @@ class LF_Mailchimp extends LF_Lead_Capture {
 
 	function __construct() {
 		add_action( 'mc4wp_form_success', array( $this, 'capture_lead') );
-		
+
 	}
 
 	/**
@@ -26,7 +26,7 @@ class LF_Mailchimp extends LF_Lead_Capture {
 
 		$data = $this->prepare_data( $lead );
 		$this->post_data( $data );
-		
+
 	}
 }
 

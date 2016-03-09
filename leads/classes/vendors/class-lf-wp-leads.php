@@ -25,10 +25,10 @@ class LF_WP_Leads extends LF_Lead_Capture {
 
 		$data = $this->prepare_data( $lead );
 		$this->post_data( $data );
-		
+
 	}/**
 	 * Allows user to provide names for name & email fields
-	 * 
+	 *
 	 */
 	public function init_settings(){
 		register_setting( 'lf_lead_capture_options', 'lf_wp_leads_options', array( $this, 'validate_options' ) );
@@ -41,7 +41,7 @@ class LF_WP_Leads extends LF_Lead_Capture {
 
 	/**
 	 * Sanatizes options value
-	 * 
+	 *
 	 */
 	public function validate_options( $input ) {
 
@@ -55,17 +55,15 @@ class LF_WP_Leads extends LF_Lead_Capture {
 
 	/**
 	 * Output for settings section
-	 * 
+	 *
 	 */
-	public function settings_section_text() { ?>
-		<h2>WP Leads Settings</h2>
-		<p>Please provide the IDs for the follwing fields in your WP Leads form. </p>
-
-	<?php }
+	public function settings_section_text() {
+		echo '<h2>WP Leads Settings</h2><p>Please provide the IDs for the follwing fields in your WP Leads form. </p>';
+	}
 
 	/**
 	 * Form ID field
-	 * 
+	 *
 	 */
 	public function lf_lead_form_id_callback() {
 		$options = get_option( 'lf_wp_leads_options' );
@@ -75,7 +73,7 @@ class LF_WP_Leads extends LF_Lead_Capture {
 
 	/**
 	 * Lead First Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_first_name_callback() {
 		$options = get_option( 'lf_wp_leads_options' );
@@ -85,7 +83,7 @@ class LF_WP_Leads extends LF_Lead_Capture {
 
 	/**
 	 * Lead Last Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_last_name_callback() {
 		$options = get_option( 'lf_wp_leads_options' );
@@ -95,7 +93,7 @@ class LF_WP_Leads extends LF_Lead_Capture {
 
 	/**
 	 * Lead Email field
-	 * 
+	 *
 	 */
 	public function lf_lead_email_callback() {
 		$options = get_option( 'lf_wp_leads_options' );
@@ -109,7 +107,7 @@ class LF_WP_Leads extends LF_Lead_Capture {
 	public function add_scripts() {
 
 		$options = get_option( 'lf_wp_leads_options' );
-		$local_data = array( 
+		$local_data = array(
 			'url' => admin_url( 'admin-ajax.php' ),
 			'form_id' => $options['lead_form_id'],
 			'first_name' => $options['lead_first_name'],

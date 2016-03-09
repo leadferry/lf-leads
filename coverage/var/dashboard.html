@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /var</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/nv.d3.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.min.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="../index.html"></a></li>
+        <li><a href="index.html">var</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/class-lf-settings-page.php.html#7">LF_Settings_Page</a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-ninja-forms.php.html#5">LF_Ninja_Forms</a></td><td class="text-right">57%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/class-lf-lead-capture.php.html#7">LF_Lead_Capture</a></td><td class="text-right">71%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-formidable-forms.php.html#5">LF_Formidable_Forms</a></td><td class="text-right">84%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-fs-contact-forms.php.html#5">LF_FS_Contact_Forms</a></td><td class="text-right">85%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-sumome.php.html#5">LF_Sumome</a></td><td class="text-right">86%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-seedprod.php.html#5">LF_Seedprod</a></td><td class="text-right">86%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-wp-leads.php.html#5">LF_WP_Leads</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-pardot.php.html#5">LF_Pardot</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-scrollboxes.php.html#5">LF_Scrollboxes</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-visual-form-builder.php.html#5">LF_Visual_Form_Builder</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-wordpress-landing-pages.php.html#5">LF_WordPress_Landing_Pages</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-simplycast.php.html#5">LF_Simplycast</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-launchpad.php.html#5">LF_Launchpad</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-custom-contact-forms.php.html#5">LF_Custom_Contact_Forms</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-mailpoet.php.html#5">LF_Mailpoet</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-formstack.php.html#5">LF_Formstack</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-custom.php.html#5">LF_Custom</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-jetpack.php.html#5">LF_Jetpack</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-hubspot.php.html#5">LF_Hubspot</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-contact-form7.php.html#5">LF_Contact_Form7</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-leadsquared.php.html#5">LF_Leadsquared</a></td><td class="text-right">87%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-cfb.php.html#5">LF_Custom_Contact_Form</a></td><td class="text-right">88%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/class-lf-lead-capture.php.html#7">LF_Lead_Capture</a></td><td class="text-right">24</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-ninja-forms.php.html#5">LF_Ninja_Forms</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-custom.php.html#5">LF_Custom</a></td><td class="text-right">18</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-leadsquared.php.html#5">LF_Leadsquared</a></td><td class="text-right">18</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-contact-form7.php.html#5">LF_Contact_Form7</a></td><td class="text-right">18</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-cfb.php.html#5">LF_Custom_Contact_Form</a></td><td class="text-right">18</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-fs-contact-forms.php.html#5">LF_FS_Contact_Forms</a></td><td class="text-right">15</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-scrollboxes.php.html#5">LF_Scrollboxes</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-pardot.php.html#5">LF_Pardot</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-visual-form-builder.php.html#5">LF_Visual_Form_Builder</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-wp-leads.php.html#5">LF_WP_Leads</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-wordpress-landing-pages.php.html#5">LF_WordPress_Landing_Pages</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-simplycast.php.html#5">LF_Simplycast</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-launchpad.php.html#5">LF_Launchpad</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-custom-contact-forms.php.html#5">LF_Custom_Contact_Forms</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-mailpoet.php.html#5">LF_Mailpoet</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-formstack.php.html#5">LF_Formstack</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-jetpack.php.html#5">LF_Jetpack</a></td><td class="text-right">14</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/class-lf-settings-page.php.html#7">LF_Settings_Page</a></td><td class="text-right">13</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-seedprod.php.html#5">LF_Seedprod</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-formidable-forms.php.html#5">LF_Formidable_Forms</a></td><td class="text-right">11</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-sumome.php.html#5">LF_Sumome</a></td><td class="text-right">8</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-hubspot.php.html#5">LF_Hubspot</a></td><td class="text-right">8</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-ninja-forms.php.html#37"><abbr title="LF_Ninja_Forms::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-pardot.php.html#35"><abbr title="LF_Pardot::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-ninja-forms.php.html#16"><abbr title="LF_Ninja_Forms::capture_lead">capture_lead</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-mailpoet.php.html#35"><abbr title="LF_Mailpoet::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-leadsquared.php.html#42"><abbr title="LF_Leadsquared::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-scrollboxes.php.html#34"><abbr title="LF_Scrollboxes::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-seedprod.php.html#34"><abbr title="LF_Seedprod::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-wordpress-landing-pages.php.html#35"><abbr title="LF_WordPress_Landing_Pages::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-wp-leads.php.html#33"><abbr title="LF_WP_Leads::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-visual-form-builder.php.html#35"><abbr title="LF_Visual_Form_Builder::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-sumome.php.html#31"><abbr title="LF_Sumome::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-simplycast.php.html#35"><abbr title="LF_Simplycast::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-launchpad.php.html#36"><abbr title="LF_Launchpad::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-jetpack.php.html#54"><abbr title="LF_Jetpack::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-cfb.php.html#45"><abbr title="LF_Custom_Contact_Form::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-contact-form7.php.html#44"><abbr title="LF_Contact_Form7::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/class-lf-settings-page.php.html#67"><abbr title="LF_Settings_Page::lf_product_callback">lf_product_callback</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/class-lf-settings-page.php.html#49"><abbr title="LF_Settings_Page::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/class-lf-settings-page.php.html#28"><abbr title="LF_Settings_Page::lf_leadferry_settings_callback">lf_leadferry_settings_callback</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-custom-contact-forms.php.html#35"><abbr title="LF_Custom_Contact_Forms::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-custom.php.html#42"><abbr title="LF_Custom::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-hubspot.php.html#34"><abbr title="LF_Hubspot::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-fs-contact-forms.php.html#45"><abbr title="LF_FS_Contact_Forms::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-formstack.php.html#35"><abbr title="LF_Formstack::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/vendors/class-lf-formidable-forms.php.html#35"><abbr title="LF_Formidable_Forms::init_settings">init_settings</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/class-lf-lead-capture.php.html#39"><abbr title="LF_Lead_Capture::post_data">post_data</a></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/class-lf-lead-capture.php.html#39"><abbr title="LF_Lead_Capture::post_data">post_data</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="www/leadferry/code/wp-content/plugins/lf-leads/leads/classes/class-lf-settings-page.php.html#67"><abbr title="LF_Settings_Page::lf_product_callback">lf_product_callback</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 2.2.3</a> using <a href="http://php.net/" target="_top">PHP 5.5.9-1ubuntu4.13</a> and <a href="http://phpunit.de/">PHPUnit 4.8.9</a> at Wed Mar 9 8:04:01 UTC 2016.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../js/jquery.min.js" type="text/javascript"></script>
+  <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../js/holder.min.js" type="text/javascript"></script>
+  <script src="../js/d3.min.js" type="text/javascript"></script>
+  <script src="../js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,2,0,1,20,0,4], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([26,0,0,0,0,0,0,0,0,0,0,190], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[71.014492753623,17,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-lead-capture.php.html#7\">LF_Lead_Capture<\/a>"],[50,7,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-settings-page.php.html#7\">LF_Settings_Page<\/a>"],[88.135593220339,18,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-cfb.php.html#5\">LF_Custom_Contact_Form<\/a>"],[87.931034482759,18,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-form7.php.html#5\">LF_Contact_Form7<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-forms-bestwebsoft.php.html#5\">LF_Contact_Forms_Bestwebsoft<\/a>"],[87.037037037037,14,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom-contact-forms.php.html#5\">LF_Custom_Contact_Forms<\/a>"],[87.719298245614,18,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom.php.html#5\">LF_Custom<\/a>"],[84.210526315789,11,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formidable-forms.php.html#5\">LF_Formidable_Forms<\/a>"],[87.037037037037,14,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formstack.php.html#5\">LF_Formstack<\/a>"],[85.365853658537,15,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-fs-contact-forms.php.html#5\">LF_FS_Contact_Forms<\/a>"],[100,3,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hellobar.php.html#5\">LF_Hellobar<\/a>"],[87.878787878788,8,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hubspot.php.html#5\">LF_Hubspot<\/a>"],[87.755102040816,14,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-jetpack.php.html#5\">LF_Jetpack<\/a>"],[87.037037037037,14,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-launchpad.php.html#5\">LF_Launchpad<\/a>"],[87.931034482759,18,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-leadsquared.php.html#5\">LF_Leadsquared<\/a>"],[100,4,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailchimp.php.html#5\">LF_Mailchimp<\/a>"],[87.037037037037,14,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailpoet.php.html#5\">LF_Mailpoet<\/a>"],[100,3,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-newsletter.php.html#5\">LF_Newsletter<\/a>"],[57.894736842105,11,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-ninja-forms.php.html#5\">LF_Ninja_Forms<\/a>"],[87.037037037037,14,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-pardot.php.html#5\">LF_Pardot<\/a>"],[87.037037037037,14,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-scrollboxes.php.html#5\">LF_Scrollboxes<\/a>"],[86.95652173913,12,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-seedprod.php.html#5\">LF_Seedprod<\/a>"],[87.037037037037,14,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-simplycast.php.html#5\">LF_Simplycast<\/a>"],[86.666666666667,8,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-sumome.php.html#5\">LF_Sumome<\/a>"],[87.037037037037,14,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-visual-form-builder.php.html#5\">LF_Visual_Form_Builder<\/a>"],[87.037037037037,14,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wordpress-landing-pages.php.html#5\">LF_WordPress_Landing_Pages<\/a>"],[87.037037037037,14,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wp-leads.php.html#5\">LF_WP_Leads<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,9,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-lead-capture.php.html#9\">LF_Lead_Capture::prepare_data<\/a>"],[0,4,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-lead-capture.php.html#39\">LF_Lead_Capture::post_data<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-lead-capture.php.html#65\">LF_Lead_Capture::visitor_cookie<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-lead-capture.php.html#81\">LF_Lead_Capture::session_cookie<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-lead-capture.php.html#102\">LF_Lead_Capture::cookie_expiry_date<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-settings-page.php.html#10\">LF_Settings_Page::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-settings-page.php.html#19\">LF_Settings_Page::lf_lead_settings_page<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-settings-page.php.html#28\">LF_Settings_Page::lf_leadferry_settings_callback<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-settings-page.php.html#49\">LF_Settings_Page::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-settings-page.php.html#59\">LF_Settings_Page::settings_section_text<\/a>"],[0,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/class-lf-settings-page.php.html#67\">LF_Settings_Page::lf_product_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-cfb.php.html#7\">LF_Custom_Contact_Form::__construct<\/a>"],[100,5,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-cfb.php.html#18\">LF_Custom_Contact_Form::cfb_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-cfb.php.html#45\">LF_Custom_Contact_Form::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-cfb.php.html#58\">LF_Custom_Contact_Form::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-cfb.php.html#72\">LF_Custom_Contact_Form::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-cfb.php.html#80\">LF_Custom_Contact_Form::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-cfb.php.html#90\">LF_Custom_Contact_Form::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-cfb.php.html#100\">LF_Custom_Contact_Form::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-cfb.php.html#110\">LF_Custom_Contact_Form::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-cfb.php.html#119\">LF_Custom_Contact_Form::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-form7.php.html#7\">LF_Contact_Form7::__construct<\/a>"],[100,5,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-form7.php.html#20\">LF_Contact_Form7::cf7_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-form7.php.html#44\">LF_Contact_Form7::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-form7.php.html#57\">LF_Contact_Form7::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-form7.php.html#71\">LF_Contact_Form7::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-form7.php.html#79\">LF_Contact_Form7::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-form7.php.html#89\">LF_Contact_Form7::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-form7.php.html#99\">LF_Contact_Form7::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-form7.php.html#109\">LF_Contact_Form7::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-form7.php.html#117\">LF_Contact_Form7::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-forms-bestwebsoft.php.html#7\">LF_Contact_Forms_Bestwebsoft::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-contact-forms-bestwebsoft.php.html#15\">LF_Contact_Forms_Bestwebsoft::bestwebsoft_capture_lead<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom-contact-forms.php.html#7\">LF_Custom_Contact_Forms::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom-contact-forms.php.html#19\">LF_Custom_Contact_Forms::ccf_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom-contact-forms.php.html#35\">LF_Custom_Contact_Forms::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom-contact-forms.php.html#48\">LF_Custom_Contact_Forms::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom-contact-forms.php.html#62\">LF_Custom_Contact_Forms::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom-contact-forms.php.html#70\">LF_Custom_Contact_Forms::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom-contact-forms.php.html#80\">LF_Custom_Contact_Forms::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom-contact-forms.php.html#90\">LF_Custom_Contact_Forms::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom-contact-forms.php.html#100\">LF_Custom_Contact_Forms::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom-contact-forms.php.html#109\">LF_Custom_Contact_Forms::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom.php.html#7\">LF_Custom::__construct<\/a>"],[100,5,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom.php.html#18\">LF_Custom::custom_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom.php.html#42\">LF_Custom::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom.php.html#55\">LF_Custom::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom.php.html#68\">LF_Custom::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom.php.html#76\">LF_Custom::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom.php.html#86\">LF_Custom::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom.php.html#96\">LF_Custom::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom.php.html#106\">LF_Custom::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-custom.php.html#115\">LF_Custom::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formidable-forms.php.html#7\">LF_Formidable_Forms::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formidable-forms.php.html#16\">LF_Formidable_Forms::formidable_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formidable-forms.php.html#35\">LF_Formidable_Forms::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formidable-forms.php.html#47\">LF_Formidable_Forms::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formidable-forms.php.html#60\">LF_Formidable_Forms::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formidable-forms.php.html#68\">LF_Formidable_Forms::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formidable-forms.php.html#78\">LF_Formidable_Forms::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formidable-forms.php.html#88\">LF_Formidable_Forms::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formstack.php.html#7\">LF_Formstack::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formstack.php.html#18\">LF_Formstack::formstack_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formstack.php.html#35\">LF_Formstack::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formstack.php.html#48\">LF_Formstack::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formstack.php.html#62\">LF_Formstack::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formstack.php.html#70\">LF_Formstack::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formstack.php.html#80\">LF_Formstack::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formstack.php.html#90\">LF_Formstack::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formstack.php.html#100\">LF_Formstack::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-formstack.php.html#109\">LF_Formstack::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-fs-contact-forms.php.html#7\">LF_FS_Contact_Forms::__construct<\/a>"],[100,5,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-fs-contact-forms.php.html#16\">LF_FS_Contact_Forms::capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-fs-contact-forms.php.html#45\">LF_FS_Contact_Forms::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-fs-contact-forms.php.html#57\">LF_FS_Contact_Forms::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-fs-contact-forms.php.html#70\">LF_FS_Contact_Forms::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-fs-contact-forms.php.html#78\">LF_FS_Contact_Forms::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-fs-contact-forms.php.html#88\">LF_FS_Contact_Forms::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-fs-contact-forms.php.html#98\">LF_FS_Contact_Forms::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hellobar.php.html#7\">LF_Hellobar::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hellobar.php.html#17\">LF_Hellobar::hellobar_capture_lead<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hellobar.php.html#32\">LF_Hellobar::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hubspot.php.html#7\">LF_Hubspot::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hubspot.php.html#18\">LF_Hubspot::hubspot_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hubspot.php.html#34\">LF_Hubspot::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hubspot.php.html#44\">LF_Hubspot::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hubspot.php.html#55\">LF_Hubspot::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hubspot.php.html#63\">LF_Hubspot::lf_lead_form_id_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-hubspot.php.html#72\">LF_Hubspot::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-jetpack.php.html#7\">LF_Jetpack::__construct<\/a>"],[100,4,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-jetpack.php.html#16\">LF_Jetpack::capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-jetpack.php.html#54\">LF_Jetpack::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-jetpack.php.html#66\">LF_Jetpack::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-jetpack.php.html#79\">LF_Jetpack::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-jetpack.php.html#87\">LF_Jetpack::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-jetpack.php.html#97\">LF_Jetpack::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-jetpack.php.html#107\">LF_Jetpack::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-launchpad.php.html#7\">LF_Launchpad::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-launchpad.php.html#18\">LF_Launchpad::launchpad_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-launchpad.php.html#36\">LF_Launchpad::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-launchpad.php.html#49\">LF_Launchpad::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-launchpad.php.html#63\">LF_Launchpad::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-launchpad.php.html#71\">LF_Launchpad::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-launchpad.php.html#81\">LF_Launchpad::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-launchpad.php.html#91\">LF_Launchpad::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-launchpad.php.html#101\">LF_Launchpad::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-launchpad.php.html#110\">LF_Launchpad::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-leadsquared.php.html#7\">LF_Leadsquared::__construct<\/a>"],[100,5,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-leadsquared.php.html#18\">LF_Leadsquared::leadsquared_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-leadsquared.php.html#42\">LF_Leadsquared::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-leadsquared.php.html#55\">LF_Leadsquared::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-leadsquared.php.html#69\">LF_Leadsquared::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-leadsquared.php.html#78\">LF_Leadsquared::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-leadsquared.php.html#88\">LF_Leadsquared::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-leadsquared.php.html#98\">LF_Leadsquared::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-leadsquared.php.html#108\">LF_Leadsquared::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-leadsquared.php.html#117\">LF_Leadsquared::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailchimp.php.html#7\">LF_Mailchimp::__construct<\/a>"],[100,3,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailchimp.php.html#16\">LF_Mailchimp::capture_lead<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailpoet.php.html#7\">LF_Mailpoet::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailpoet.php.html#18\">LF_Mailpoet::mailpoet_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailpoet.php.html#35\">LF_Mailpoet::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailpoet.php.html#48\">LF_Mailpoet::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailpoet.php.html#62\">LF_Mailpoet::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailpoet.php.html#71\">LF_Mailpoet::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailpoet.php.html#81\">LF_Mailpoet::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailpoet.php.html#91\">LF_Mailpoet::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailpoet.php.html#101\">LF_Mailpoet::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-mailpoet.php.html#110\">LF_Mailpoet::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-newsletter.php.html#7\">LF_Newsletter::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-newsletter.php.html#17\">LF_Newsletter::newsletter_capture_lead<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-newsletter.php.html#29\">LF_Newsletter::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-ninja-forms.php.html#7\">LF_Ninja_Forms::__construct<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-ninja-forms.php.html#16\">LF_Ninja_Forms::capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-ninja-forms.php.html#37\">LF_Ninja_Forms::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-ninja-forms.php.html#49\">LF_Ninja_Forms::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-ninja-forms.php.html#62\">LF_Ninja_Forms::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-ninja-forms.php.html#70\">LF_Ninja_Forms::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-ninja-forms.php.html#80\">LF_Ninja_Forms::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-ninja-forms.php.html#90\">LF_Ninja_Forms::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-pardot.php.html#7\">LF_Pardot::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-pardot.php.html#18\">LF_Pardot::pardot_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-pardot.php.html#35\">LF_Pardot::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-pardot.php.html#48\">LF_Pardot::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-pardot.php.html#62\">LF_Pardot::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-pardot.php.html#70\">LF_Pardot::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-pardot.php.html#80\">LF_Pardot::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-pardot.php.html#90\">LF_Pardot::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-pardot.php.html#100\">LF_Pardot::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-pardot.php.html#109\">LF_Pardot::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-scrollboxes.php.html#7\">LF_Scrollboxes::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-scrollboxes.php.html#18\">LF_Scrollboxes::scrollboxes_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-scrollboxes.php.html#34\">LF_Scrollboxes::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-scrollboxes.php.html#47\">LF_Scrollboxes::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-scrollboxes.php.html#61\">LF_Scrollboxes::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-scrollboxes.php.html#70\">LF_Scrollboxes::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-scrollboxes.php.html#80\">LF_Scrollboxes::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-scrollboxes.php.html#90\">LF_Scrollboxes::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-scrollboxes.php.html#100\">LF_Scrollboxes::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-scrollboxes.php.html#109\">LF_Scrollboxes::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-seedprod.php.html#7\">LF_Seedprod::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-seedprod.php.html#18\">LF_Seedprod::seedprod_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-seedprod.php.html#34\">LF_Seedprod::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-seedprod.php.html#46\">LF_Seedprod::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-seedprod.php.html#59\">LF_Seedprod::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-seedprod.php.html#67\">LF_Seedprod::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-seedprod.php.html#77\">LF_Seedprod::lf_lead_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-seedprod.php.html#87\">LF_Seedprod::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-seedprod.php.html#97\">LF_Seedprod::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-simplycast.php.html#7\">LF_Simplycast::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-simplycast.php.html#18\">LF_Simplycast::simplycast_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-simplycast.php.html#35\">LF_Simplycast::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-simplycast.php.html#48\">LF_Simplycast::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-simplycast.php.html#62\">LF_Simplycast::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-simplycast.php.html#70\">LF_Simplycast::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-simplycast.php.html#80\">LF_Simplycast::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-simplycast.php.html#90\">LF_Simplycast::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-simplycast.php.html#100\">LF_Simplycast::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-simplycast.php.html#109\">LF_Simplycast::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-sumome.php.html#7\">LF_Sumome::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-sumome.php.html#18\">LF_Sumome::sumome_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-sumome.php.html#31\">LF_Sumome::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-sumome.php.html#41\">LF_Sumome::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-sumome.php.html#52\">LF_Sumome::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-sumome.php.html#60\">LF_Sumome::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-sumome.php.html#69\">LF_Sumome::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-visual-form-builder.php.html#7\">LF_Visual_Form_Builder::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-visual-form-builder.php.html#18\">LF_Visual_Form_Builder::vfb_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-visual-form-builder.php.html#35\">LF_Visual_Form_Builder::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-visual-form-builder.php.html#48\">LF_Visual_Form_Builder::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-visual-form-builder.php.html#62\">LF_Visual_Form_Builder::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-visual-form-builder.php.html#70\">LF_Visual_Form_Builder::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-visual-form-builder.php.html#80\">LF_Visual_Form_Builder::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-visual-form-builder.php.html#90\">LF_Visual_Form_Builder::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-visual-form-builder.php.html#100\">LF_Visual_Form_Builder::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-visual-form-builder.php.html#109\">LF_Visual_Form_Builder::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wordpress-landing-pages.php.html#7\">LF_WordPress_Landing_Pages::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wordpress-landing-pages.php.html#18\">LF_WordPress_Landing_Pages::wpl_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wordpress-landing-pages.php.html#35\">LF_WordPress_Landing_Pages::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wordpress-landing-pages.php.html#48\">LF_WordPress_Landing_Pages::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wordpress-landing-pages.php.html#62\">LF_WordPress_Landing_Pages::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wordpress-landing-pages.php.html#71\">LF_WordPress_Landing_Pages::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wordpress-landing-pages.php.html#81\">LF_WordPress_Landing_Pages::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wordpress-landing-pages.php.html#91\">LF_WordPress_Landing_Pages::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wordpress-landing-pages.php.html#101\">LF_WordPress_Landing_Pages::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wordpress-landing-pages.php.html#110\">LF_WordPress_Landing_Pages::add_scripts<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wp-leads.php.html#7\">LF_WP_Leads::__construct<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wp-leads.php.html#18\">LF_WP_Leads::wp_leads_capture_lead<\/a>"],[0,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wp-leads.php.html#33\">LF_WP_Leads::init_settings<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wp-leads.php.html#46\">LF_WP_Leads::validate_options<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wp-leads.php.html#60\">LF_WP_Leads::settings_section_text<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wp-leads.php.html#68\">LF_WP_Leads::lf_lead_form_id_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wp-leads.php.html#78\">LF_WP_Leads::lf_lead_first_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wp-leads.php.html#88\">LF_WP_Leads::lf_lead_last_name_callback<\/a>"],[100,2,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wp-leads.php.html#98\">LF_WP_Leads::lf_lead_email_callback<\/a>"],[100,1,"<a href=\"www\/leadferry\/code\/wp-content\/plugins\/lf-leads\/leads\/classes\/vendors\/class-lf-wp-leads.php.html#107\">LF_WP_Leads::add_scripts<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

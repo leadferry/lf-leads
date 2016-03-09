@@ -5,7 +5,6 @@ require_once( LEADFERRY_PATH . '/leads/classes/class-lf-lead-capture.php');
 class LF_Hubspot extends LF_Lead_Capture {
 
 	function __construct() {
-
 		add_action( 'admin_init', array( $this, 'init_settings'));
 		add_action( 'wp_enqueue_scripts', array( $this, 'add_scripts') );
 		add_action( 'wp_ajax_nopriv_hubspot_capture_lead', array( $this, 'hubspot_capture_lead' ) );
@@ -14,7 +13,7 @@ class LF_Hubspot extends LF_Lead_Capture {
 
 	/**
 	 * Capture lead
-	 * 
+	 *
 	 */
 	public function hubspot_capture_lead() {
 
@@ -30,7 +29,7 @@ class LF_Hubspot extends LF_Lead_Capture {
 
 	/**
 	 * Allows user to provide names for name & email fields
-	 * 
+	 *
 	 */
 	public function init_settings(){
 		register_setting( 'lf_lead_capture_options', 'lf_hubspot_options', array( $this, 'validate_options' ) );
@@ -40,7 +39,7 @@ class LF_Hubspot extends LF_Lead_Capture {
 
 	/**
 	 * Sanatizes options value
-	 * 
+	 *
 	 */
 	public function validate_options( $input ) {
 
@@ -51,17 +50,15 @@ class LF_Hubspot extends LF_Lead_Capture {
 
 	/**
 	 * Output for settings section
-	 * 
+	 *
 	 */
-	public function settings_section_text() { ?>
-		<h2>Hubspot Settings</h2>
-		<p>Please provide form ID for your hubspot form below.  </p>
-
-	<?php }
+	public function settings_section_text() {
+		echo '<h2>Hubspot Settings</h2><p>Please provide form ID for your hubspot form below.  </p>';
+	}
 
 	/**
 	 * Lead First Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_form_id_callback() {
 		$options = get_option( 'lf_hubspot_options' );
@@ -74,7 +71,7 @@ class LF_Hubspot extends LF_Lead_Capture {
 	 */
 	public function add_scripts() {
 		$options = get_option( 'lf_hubspot_options' );
-		$local_data = array( 
+		$local_data = array(
 			'url' => admin_url( 'admin-ajax.php' ),
 			'form_id' => $options['form_id'],
 		);

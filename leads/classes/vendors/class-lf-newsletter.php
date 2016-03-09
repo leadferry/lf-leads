@@ -15,14 +15,12 @@ class LF_Newsletter extends LF_Lead_Capture {
 	 *
 	 */
 	public function newsletter_capture_lead() {
-
-
 		$lead['provider'] = 'newsletter';
 		$lead['email'] = $_POST['email'];
 
 		$data = $this->prepare_data( $lead );
 		$this->post_data( $data );
-		
+
 	}
 
 	/**

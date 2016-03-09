@@ -5,7 +5,7 @@ require_once( LEADFERRY_PATH . '/leads/classes/class-lf-lead-capture.php');
 class LF_Formidable_Forms extends LF_Lead_Capture {
 
 	function __construct() {
-		add_action( 'frm_after_create_entry', array( $this, 'capture_lead'), 30, 2 );
+		add_action( 'frm_after_create_entry', array( $this, 'formidable_capture_lead'), 30, 2 );
 		add_action( 'admin_init', array( $this, 'init_settings'));
 	}
 
@@ -13,7 +13,7 @@ class LF_Formidable_Forms extends LF_Lead_Capture {
 	 * Capture lead
 	 *
 	 */
-	public function capture_lead( $entry_id, $form_id ) {
+	public function formidable_capture_lead( $entry_id, $form_id ) {
 
 		$options = get_option( 'lf_formidable_options' );
 		$items = $_POST['item_meta'];
@@ -30,7 +30,7 @@ class LF_Formidable_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Allows user to provide names for name & email fields
-	 * 
+	 *
 	 */
 	public function init_settings(){
 		register_setting( 'lf_lead_capture_options', 'lf_formidable_options', array( $this, 'validate_options' ) );
@@ -42,7 +42,7 @@ class LF_Formidable_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Sanatizes options value
-	 * 
+	 *
 	 */
 	public function validate_options( $input ) {
 
@@ -55,17 +55,15 @@ class LF_Formidable_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Output for settings section
-	 * 
+	 *
 	 */
-	public function settings_section_text() { ?>
-		<h2>Formidable Settings</h2>
-		<p>Please provide the IDs of following fields</p>
-
-	<?php }
+	public function settings_section_text() {
+		echo '<h2>Formidable Forms Settings</h2><p>Please provide the IDs for the following fields.</p>';
+	}
 
 	/**
 	 * Lead First Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_first_name_callback() {
 		$options = get_option( 'lf_formidable_options' );
@@ -75,7 +73,7 @@ class LF_Formidable_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Lead Last Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_last_name_callback() {
 		$options = get_option( 'lf_formidable_options' );
@@ -85,7 +83,7 @@ class LF_Formidable_Forms extends LF_Lead_Capture {
 
 	/**
 	 * Lead Email field
-	 * 
+	 *
 	 */
 	public function lf_lead_email_callback() {
 		$options = get_option( 'lf_formidable_options' );

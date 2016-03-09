@@ -13,31 +13,43 @@ class LF_Jetpack extends LF_Lead_Capture {
 	 * Capture lead
 	 *
 	 */
-	public function capture_lead( $post_id, $all_values, $extra_values ) {		
+	public function capture_lead( $post_id, $all_values, $extra_values ) {
+
 		$options = get_option( 'lf_jetpack_options' );
 
-		/* $all_values is an array containing the data posted by Jetpack form 
-		The keys have a special posiiton based format like 1_First Name, 2_Last_Name etc. 
+		/* $all_values is an array containing the data posted by Jetpack form
+		The keys have a special posiiton based format like 1_First Name, 2_Last_Name etc.
 		Therefore we need to first get the correct keys */
 
+
 		$keys = array_keys($all_values);
-		$firstname = array_keys( array_flip ( preg_grep( "/First Name$/", $keys ) ) );
-		$lastname = array_keys( array_flip ( preg_grep( "/Last Name$/", $keys ) ) );
-		$email = array_keys( array_flip ( preg_grep( "/Email$/", $keys ) ) );
+
+		if( !empty( $options['lead_first_name'] ) ) {
+			$pattern = $options['lead_first_name'];
+			$firstname = array_keys( array_flip ( preg_grep( "/[$pattern]$/", $keys ) ) );
+			$lead['first_name'] = $all_values[$firstname[0]];
+		}
+
+		if( !empty( $options['lead_last_name'] ) ) {
+			$pattern = $options['lead_last_name'];
+			$lastname = array_keys( array_flip ( preg_grep( "/[$pattern]$/", $keys ) ) );
+			$lead['last_name'] = $all_values[$lastname[0]];
+		}
+
+		if( !empty( $options['lead_email'] ) ) {
+			$pattern = $options['lead_email'];
+			$email = array_keys( array_flip ( preg_grep( "/[$pattern]$/", $keys ) ) );
+			$lead['email'] = $all_values[$email[0]];
+		}
 
 		$lead['provider'] = "Jetpack";
-		// $lead['form_id'] = $_POST['form_id'];
-		$lead['first_name'] = $all_values[$firstname[0]];
-		$lead['last_name'] = $all_values[$lastname[0]];
-		$lead['email'] = $all_values[$email[0]];
-
 		$data = $this->prepare_data( $lead );
 		$this->post_data( $data );
 	}
 
 	/**
 	 * Allows user to provide names for name & email fields
-	 * 
+	 *
 	 */
 	public function init_settings(){
 		register_setting( 'lf_lead_capture_options', 'lf_jetpack_options', array( $this, 'validate_options' ) );
@@ -49,7 +61,7 @@ class LF_Jetpack extends LF_Lead_Capture {
 
 	/**
 	 * Sanatizes options value
-	 * 
+	 *
 	 */
 	public function validate_options( $input ) {
 
@@ -62,17 +74,15 @@ class LF_Jetpack extends LF_Lead_Capture {
 
 	/**
 	 * Output for settings section
-	 * 
+	 *
 	 */
-	public function settings_section_text() { ?>
-		<h2>Jetpack Settings</h2>
-		<p>Please provide the labels for your Jetpack form for the follwing fields.  </p>
-
-	<?php }
+	public function settings_section_text() {
+		echo '<h2>Jetpack Settings</h2><p>Please provide the labels( case sensitive ) for your Jetpack form for the follwing fields.  </p>';
+	}
 
 	/**
 	 * Lead First Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_first_name_callback() {
 		$options = get_option( 'lf_jetpack_options' );
@@ -82,7 +92,7 @@ class LF_Jetpack extends LF_Lead_Capture {
 
 	/**
 	 * Lead Last Name field
-	 * 
+	 *
 	 */
 	public function lf_lead_last_name_callback() {
 		$options = get_option( 'lf_jetpack_options' );
@@ -92,7 +102,7 @@ class LF_Jetpack extends LF_Lead_Capture {
 
 	/**
 	 * Lead Email field
-	 * 
+	 *
 	 */
 	public function lf_lead_email_callback() {
 		$options = get_option( 'lf_jetpack_options' );
