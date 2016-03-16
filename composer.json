@@ -4,6 +4,9 @@
 	"require": {
 		"wordpress/wp-list-table": "~3.8"
 	},
+	"require-dev": {
+		"satooshi/php-coveralls": "dev-master"
+	},
 	"repositories": [
 		{
 			"type": "package",
