@@ -23,7 +23,28 @@ before_script:
   - bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
   - wget http://getcomposer.org/composer.phar
   - php composer.phar install --dev --no-interaction
-
+  - wget https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+  - chmod +x wp-cli.phar
+  - sudo mv wp-cli.phar /usr/local/bin/wp
+  - wp plugin install contact-form-7 --activate
+  - wp plugin install contact-form-builder --activate
+  - wp plugin install contact-form-plugin --activate
+  - wp plugin install custom-contact-forms --activate
+  - wp plugin install si-contact-form --activate
+  - wp plugin install formidable --activate
+  - wp plugin install hubspot-tracking-code --activate
+  - wp plugin install jetpack --activate
+  - wp plugin install embed-form --activate
+  - wp plugin install launchpad-by-obox --activate
+  - wp plugin install leadsquared-suite --activate
+  - wp plugin install mailchimp-for-wp --activate
+  - wp plugin install wysija-newsletters --activate
+  - wp plugin install newsletter --activate
+  - wp plugin install ninja-forms --activate
+  - wp plugin install dreamgrow-scroll-triggered-box --activate
+  - wp plugin install sumome --activate
+  - wp plugin install visual-form-builder --activate
+  
 script:
  - mkdir -p build/logs
  - phpunit --coverage-clover build/logs/clover.xml
